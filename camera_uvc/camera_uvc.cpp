@@ -3,7 +3,7 @@
  * @Autor: YURI
  * @Date: 2022-01-21 01:05:31
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-22 22:01:25
+ * @LastEditTime: 2022-01-22 23:28:17
  */
 #include "camera_uvc.h"
 #include "time.h"
@@ -170,7 +170,7 @@ unsigned char* camera_uvc::read_frame (void)
     memcpy(frame,buffers[buf.index].start,buffers[buf.index].length);
     //fwrite(buffers[buf.index].start, buffers[buf.index].length, 1, file_fd);
     
-    printf ("buf.index dq is %d,\n",buf.index);
+    //printf ("buf.index dq is %d,\n",buf.index);
     ret=ioctl (video_fd, VIDIOC_QBUF, &buf); 
     if(ret<0) printf("failture VIDIOC_QBUF\n");
     finish=clock();

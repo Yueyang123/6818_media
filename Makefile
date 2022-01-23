@@ -30,6 +30,7 @@ INCLUDE :=-I$(KERNDIR)/arch/arm/mach-s5p6818/include/
 INCLUDE += -I$(KERNDIR)/include
 INCLUDE += -I$(LIBSDIR)/src/libion
 INCLUDE += -I$(LIBSDIR)/src/libnxv4l2
+INCLUDE += -I$(LIBSDIR)/include/theoraparser
 INCLUDE += -I$(LIBSDIR)/include
 INCLUDE += -I$(FFMPEGDIR)/include
 INCLUDE += -I$(OPENCVDIR)/include
@@ -37,13 +38,15 @@ INCLUDE += -I./camera_6124
 INCLUDE += -I./camera_uvc
 INCLUDE += -I./ffmpeg/interface
 INCLUDE += -I./opencv/interface
+INCLUDE += -I./framebuffer
 
-
-LIBRARY	+= -L$(LIBSDIR)/lib
+LIBRARY	+= -L$(LIBSDIR)/lib -L$(LIBSDIR)/lib/ratecontrol 
 LIBRARY	+= -L$(LIBSDIR)/src/libion
 LIBRARY	+= -L$(LIBSDIR)/src/libnxv4l2
 LIBRARY += -lion -lv4l2-nexell
 LIBRARY	+= -lm -lstdc++
+LIBRARY	+= -lnxvpu -lnxdsp -lnxvip -lnxv4l2 -lnxvmem -lnxvidrc
+LIBRARY	+= -ltheoraparser
 
 LIBRARY += -L$(FFMPEGDIR)/lib  \
 		-lavformat\
@@ -75,6 +78,7 @@ CPPSRCS +=./camera_6124/camera_6124.cpp
 CPPSRCS +=./camera_uvc/camera_uvc.cpp
 CPPSRCS +=./ffmpeg/interface/ffmpeg_sws.cpp
 CPPSRCS +=./opencv/interface/opencv_mat.cpp
+CPPSRCS +=./framebuffer/framebuffer.cpp
 CCSRCS  :=
 COBJS	:= $(CCSRCS:%.c=%.o)
 CPPOBJS	:=  $(CPPSRCS:%.cpp=%.o)
@@ -83,17 +87,25 @@ OBJS    :=$(COBJS) $(CPPOBJS)
 # 例程文件
 CFLAGS	+= -g
 FFMPEGAPP  := ./bin/vi_ffmpeg_opencv
-UVCAPP  := ./bin/vi_uvc
 FFMPEG_SRC :=./example/vi_ffmpeg_opencv.cpp 
-UVC_SRC :=./example/vi_uvc.cpp 
 FFMPEG_OBJ :=$(FFMPEG_SRC:%.cpp=%.o)
+UVCAPP  := ./bin/vi_uvc
+UVC_SRC :=./example/vi_uvc.cpp 
 UVC_OBJ:=$(UVC_SRC:%.cpp=%.o)
+FRAMEBUFFERAPP  := ./bin/framebuffer_uvc
+FRAMEBUFFER_SRC :=./example/vi_framebuffer.cpp 
+FRAMEBUFFER_OBJ:=$(FRAMEBUFFER_SRC:%.cpp=%.o)
 ######################################################################
 # Build
-all: $(FFMPEGAPP) $(UVCAPP)
+all: ffmpeg_app uvc_app framebuffer_app
+ffmpeg_app: $(FFMPEGAPP) 
+uvc_app: 	$(UVCAPP)
+framebuffer_app:$(FRAMEBUFFERAPP)
 $(FFMPEGAPP): $(OBJS) $(FFMPEG_OBJ)
 	$(CPP) $(CPPFLAGS) $^ -o $@ $(LIBRARY)
 $(UVCAPP): $(OBJS) $(UVC_OBJ)
+	$(CPP) $(CPPFLAGS) $^ -o $@ $(LIBRARY)
+$(FRAMEBUFFERAPP): $(OBJS) $(FRAMEBUFFER_OBJ)
 	$(CPP) $(CPPFLAGS) $^ -o $@ $(LIBRARY)
 %.o	:  %.cpp
 	$(CPP) $(CPPFLAGS) $(INCLUDE) -c -o $@ $<  $(LIBRARY)

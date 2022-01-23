@@ -38,6 +38,10 @@
         "*.tcc": "cpp",
         "fstream": "cpp",
         "iosfwd": "cpp",
-        "streambuf": "cpp"
+        "streambuf": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
     }
 }

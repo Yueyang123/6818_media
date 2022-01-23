@@ -9,6 +9,7 @@
                 "${workspaceFolder}/opencv/include",
                 "${workspaceFolder}/ffmpeg/interface",
                 "${workspaceFolder}/opencv/interface",
+                "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/framebuffer",
                 "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/kernel/arch/arm/mach-s5p6818/include/mach",
                 "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/include",
                 "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/src/libion",
