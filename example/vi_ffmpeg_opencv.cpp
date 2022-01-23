@@ -1,9 +1,10 @@
 /*
- * @Description: 
+ * @Description: 这是一个测试NVP6124摄像头 FFMPEG和opencv库的历程 需要输入一个文件名称 例如 xxx ./frame 
+    运行结束后会在当前目录产生一个frame.yuv frame.bmp接口的文件
  * @Autor: YURI
  * @Date: 2022-01-20 00:28:05
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-20 00:28:05
+ * @LastEditTime: 2022-01-21 01:04:13
  */
 #include <iostream>
 #include <unistd.h>

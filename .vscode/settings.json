@@ -33,5 +33,11 @@
     "python.languageServer": "Pylance",
     "html.format.contentUnformatted": "",
     "files.encoding": "utf8",
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "*.tcc": "cpp",
+        "fstream": "cpp",
+        "iosfwd": "cpp",
+        "streambuf": "cpp"
+    }
 }

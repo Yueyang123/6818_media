@@ -1,9 +1,9 @@
 /*
- * @Description: 
+ * @Description: 提供NVP6124 摄像头访问接口
  * @Autor: YURI
- * @Date: 2022-01-19 23:25:28
+ * @Date: 2022-01-21 01:05:31
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-20 01:36:27
+ * @LastEditTime: 2022-01-21 01:05:32
  */
 #ifndef CAMERA_H
 #define CAMERA_H

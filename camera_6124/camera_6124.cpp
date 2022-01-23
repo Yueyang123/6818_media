@@ -1,5 +1,13 @@
+/*
+ * @Description: 提供NVP6124 摄像头访问接口
+ * @Autor: YURI
+ * @Date: 2022-01-21 01:05:31
+ * @LastEditors: YURI
+ * @LastEditTime: 2022-01-21 01:05:32
+ */
 #include "camera_6124.h"
 #include <time.h>
+
 void camera::CHECK_COMMAND(int command) 
 {
      do { 
