@@ -1,4 +1,4 @@
-prefix=/home/yuri/SDK/EXYNOS6818/SDK/ffmpeg
+prefix=/home/yuri/SDK/HI3516/SDK/ffmpeg
 exec_prefix=${prefix}
 libdir=${prefix}/lib
 includedir=${prefix}/include

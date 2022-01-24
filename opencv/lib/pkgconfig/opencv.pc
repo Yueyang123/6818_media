@@ -1,14 +1,13 @@
 # Package Information for pkg-config
 
-prefix=/home/yuri/SDK/EXYNOS6818/SDK/opencv/install
+prefix=/home/swann/SDK/HI3516/SDK/opencv/INSTALL
 exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
+libdir=
 includedir_old=${prefix}/include/opencv
 includedir_new=${prefix}/include
 
 Name: OpenCV
 Description: Open Source Computer Vision Library
-Version: 3.4.5
-Libs: -L${exec_prefix}/lib -lopencv_dnn -lopencv_ml -lopencv_objdetect -lopencv_shape -lopencv_stitching -lopencv_superres -lopencv_videostab -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_imgcodecs -lopencv_video -lopencv_photo -lopencv_imgproc -lopencv_flann -lopencv_core
-Libs.private: -ldl -lm -lpthread -lrt
+Version: 2.4.9
+Libs:  ${exec_prefix}/lib/libopencv_core.so ${exec_prefix}/lib/libopencv_features2d.so ${exec_prefix}/lib/libopencv_flann.so ${exec_prefix}/lib/libopencv_highgui.so ${exec_prefix}/lib/libopencv_imgproc.so ${exec_prefix}/lib/libopencv_ml.so ${exec_prefix}/lib/libopencv_photo.so ${exec_prefix}/lib/libopencv_video.so
 Cflags: -I${includedir_old} -I${includedir_new}

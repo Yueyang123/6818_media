@@ -1,0 +1,615 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "/home/swann/SDK/HI3516/LinuxC/MEDIA/bin/vi_framebuffer"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"add_link_options",
+			"target_link_libraries",
+			"add_compile_options",
+			"add_definitions",
+			"include_directories",
+			"find_package"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"opencv/share/OpenCV/OpenCVConfig.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 84,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 30,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 52,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 13
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 97,
+				"parent" : 14
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 47,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 48,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 49,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 50,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-Os -DNDEBUG  "
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-lpthread"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-lm"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-ldl"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DISP_V2"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-lstdc++"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mcpu=cortex-a7"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mfloat-abi=softfp"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mfpu=neon-vfpv4"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fno-aggressive-loop-optimizations"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-O2"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fstack-protector-strong"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fPIC"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DHI_RELEASE"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-error=implicit-function-declaration"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DVER_X=1"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DVER_Y=0"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DVER_Z=0"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DVER_P=0"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DVER_B=10"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DUSER_BIT_32"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DKERNEL_BIT_32"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-date-time"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DSENSOR0_TYPE=GALAXYCORE_GC2053_MIPI_2M_30FPS_10BIT"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DSENSOR1_TYPE=GALAXYCORE_GC2053_MIPI_2M_30FPS_10BIT"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DHI_ACODEC_TYPE_INNER"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-DHI_ACODEC_TYPE_HDMI"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wl,--start-group"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libmpi.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libhdmi.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hiae.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libisp.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hidehaze.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hidrc.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hildci.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hicalcflicker.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hiawb.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_gc2053.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libVoiceEngine.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libupvqe.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libdnvqe.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsecurec.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx327.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx327_2l.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx307.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx307_2l.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx458.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_mn34220.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_os05a.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_os08a10.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_sc4210.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_ov12870.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_os04b10.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx415.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx219.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx274.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx335.a"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wl,--end-group"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "HI3516"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "/home/swann/SDK/HI3516/LinuxC/MEDIA/ffmpeg/include"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/swann/SDK/HI3516/LinuxC/MEDIA/opencv/include"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/camera/camera_uvc"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/camera"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/3rd_interface/ffmpeg"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/3rd_interface/opencv"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/framebuffer"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/home/swann/SDK/HI3516/LinuxC/MEDIA/opencv/include/opencv"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/home/swann/SDK/HI3516/MYMMP/mpp/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/home/swann/SDK/HI3516/MYMMP/mpp/sample/audio/adp"
+				},
+				{
+					"backtrace" : 18,
+					"path" : "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/swann/SDK/HI3516/MYMMP/mpp/sample/vio"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	],
+	"id" : "vi_framebuffer::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Os -DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-L/home/swann/SDK/HI3516/LinuxC/MEDIA/ffmpeg/lib",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/swann/SDK/HI3516/LinuxC/MEDIA/opencv/lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../opencv/lib/libopencv_video.so.2.4.9",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../opencv/lib/libopencv_photo.so.2.4.9",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../opencv/lib/libopencv_ml.so.2.4.9",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../opencv/lib/libopencv_features2d.so.2.4.9",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavformat",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavdevice",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavcodec",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavutil",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavfilter",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpostproc",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lswscale",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lswresample",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../opencv/lib/libopencv_highgui.so.2.4.9",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../opencv/lib/libopencv_imgproc.so.2.4.9",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../opencv/lib/libopencv_flann.so.2.4.9",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "../opencv/lib/libopencv_core.so.2.4.9",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "vi_framebuffer",
+	"nameOnDisk" : "vi_framebuffer",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/camera/camera_uvc/camera_uvc.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/framebuffer/framebuffer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/3rd_interface/opencv/opencv_mat.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/3rd_interface/ffmpeg/ffmpeg_sws.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/example/vi_framebuffer.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

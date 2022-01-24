@@ -1,0 +1,3 @@
+/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/rebuild_cache.dir
+/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/edit_cache.dir
+/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_framebuffer.dir
