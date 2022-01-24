@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget opencv_core opencv_flann opencv_imgproc opencv_highgui opencv_features2d opencv_ml opencv_photo opencv_video)
+foreach(_expectedTarget opencv_core opencv_flann opencv_imgproc opencv_ml opencv_photo opencv_video opencv_dnn opencv_imgcodecs opencv_shape opencv_videoio opencv_highgui opencv_superres opencv_features2d opencv_calib3d opencv_objdetect opencv_stitching opencv_videostab)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -55,23 +55,118 @@ add_library(opencv_core SHARED IMPORTED)
 # Create imported target opencv_flann
 add_library(opencv_flann SHARED IMPORTED)
 
+set_target_properties(opencv_flann PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core"
+)
+
 # Create imported target opencv_imgproc
 add_library(opencv_imgproc SHARED IMPORTED)
 
-# Create imported target opencv_highgui
-add_library(opencv_highgui SHARED IMPORTED)
-
-# Create imported target opencv_features2d
-add_library(opencv_features2d SHARED IMPORTED)
+set_target_properties(opencv_imgproc PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core"
+)
 
 # Create imported target opencv_ml
 add_library(opencv_ml SHARED IMPORTED)
 
+set_target_properties(opencv_ml PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core"
+)
+
 # Create imported target opencv_photo
 add_library(opencv_photo SHARED IMPORTED)
 
+set_target_properties(opencv_photo PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc"
+)
+
 # Create imported target opencv_video
 add_library(opencv_video SHARED IMPORTED)
+
+set_target_properties(opencv_video PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc"
+)
+
+# Create imported target opencv_dnn
+add_library(opencv_dnn SHARED IMPORTED)
+
+set_target_properties(opencv_dnn PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc"
+)
+
+# Create imported target opencv_imgcodecs
+add_library(opencv_imgcodecs SHARED IMPORTED)
+
+set_target_properties(opencv_imgcodecs PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc"
+)
+
+# Create imported target opencv_shape
+add_library(opencv_shape SHARED IMPORTED)
+
+set_target_properties(opencv_shape PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_video"
+)
+
+# Create imported target opencv_videoio
+add_library(opencv_videoio SHARED IMPORTED)
+
+set_target_properties(opencv_videoio PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_imgcodecs"
+)
+
+# Create imported target opencv_highgui
+add_library(opencv_highgui SHARED IMPORTED)
+
+set_target_properties(opencv_highgui PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio"
+)
+
+# Create imported target opencv_superres
+add_library(opencv_superres SHARED IMPORTED)
+
+set_target_properties(opencv_superres PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio"
+)
+
+# Create imported target opencv_features2d
+add_library(opencv_features2d SHARED IMPORTED)
+
+set_target_properties(opencv_features2d PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui"
+)
+
+# Create imported target opencv_calib3d
+add_library(opencv_calib3d SHARED IMPORTED)
+
+set_target_properties(opencv_calib3d PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d"
+)
+
+# Create imported target opencv_objdetect
+add_library(opencv_objdetect SHARED IMPORTED)
+
+set_target_properties(opencv_objdetect PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d"
+)
+
+# Create imported target opencv_stitching
+add_library(opencv_stitching SHARED IMPORTED)
+
+set_target_properties(opencv_stitching PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d"
+)
+
+# Create imported target opencv_videostab
+add_library(opencv_videostab SHARED IMPORTED)
+
+set_target_properties(opencv_videostab PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_photo;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d"
+)
+
+if(CMAKE_VERSION VERSION_LESS 2.8.12)
+  message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
+endif()
 
 # Load information for each installed configuration.
 get_filename_component(_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)

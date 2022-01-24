@@ -1,4 +1,4 @@
-prefix=/home/yuri/SDK/HI3516/SDK/ffmpeg
+prefix=/home/yuri/SDK/EXYNOS6818/SDK/ffmpeg
 exec_prefix=${prefix}
 libdir=${prefix}/lib
 includedir=${prefix}/include
@@ -10,5 +10,5 @@ Requires:
 Requires.private: libavcodec >= 57.24.102, libswresample >= 2.0.101, libavutil >= 55.17.103
 Conflicts:
 Libs: -L${libdir}  -lavformat 
-Libs.private: -lm -pthread -ldl
+Libs.private: -lasound -lm -lz -pthread -ldl
 Cflags: -I${includedir}
