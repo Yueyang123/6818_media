@@ -1,13 +1,8 @@
 cmake_minimum_required(VERSION 3.2)
 project(MUTIL_MEDIA)
-
-#设置两个库所在位置
-set(FFMPEGDIR /home/swann/SDK/HI3516/LinuxC/MEDIA/ffmpeg)
-set(OPENCVDIR /home/swann/SDK/HI3516/LinuxC/MEDIA/opencv)
-
+#禁用WARNING
+add_definitions(-w)
 #设置头文件目录
-include_directories (ffmpeg/include)
-include_directories (opencv/include)
 include_directories (source/camera/camera_uvc)
 include_directories (source/camera)
 include_directories (source/3rd_interface/ffmpeg)
@@ -25,13 +20,8 @@ aux_source_directory(source/framebuffer          BASE2_SRC)
 aux_source_directory(source/3rd_interface/opencv BASE3_SRC)
 aux_source_directory(source/3rd_interface/ffmpeg BASE4_SRC)
 
-set(CMAKE_PREFIX_PATH "./opencv")
-find_package(OpenCV REQUIRED)
-list(APPEND FFmpeg_LIBS  avformat avdevice avcodec avutil avfilter postproc swscale swresample)
-add_link_options(-L${FFMPEGDIR}/lib -lpthread)
-
-option(HI3516 "USE HI3516 LIB" ON)
-option(S5P6818 "USE S5P6818 LIB" OFF)
+option(HI3516 "USE HI3516 LIB" OFF)
+option(S5P6818 "USE S5P6818 LIB" ON)
 if (HI3516)
     add_definitions(-DHI3516)
 endif()
@@ -42,9 +32,21 @@ endif()
 if(HI3516)
     #添加环境所需的头文件
     MESSAGE(USE_HI3516_LIB)
+    
+    #设置两个库所在位置
+    set(FFMPEGDIR /home/swann/SDK/HI3516/SDK/ffmpeg)
+    set(OPENCVDIR /home/swann/SDK/HI3516/SDK/opencv/INSTALL)
+    list(APPEND FFmpeg_LIBS  avformat avdevice avcodec avutil avfilter postproc swscale swresample)
+    add_link_options(-L${FFMPEGDIR}/lib -lpthread)
+    list(APPEND OpenCV_LIBS     opencv_imgproc opencv_core )
+    add_link_options(-L${OPENCVDIR}/lib)
+    include_directories (${FFMPEGDIR}/include)
+    include_directories (${OPENCVDIR}/include)
+
     #添加平台摄像头文件夹
     aux_source_directory(source/camera/camera_gc2053   PLATFROM_CAMERA)  
     include_directories (source/camera/camera_gc2053)
+
 
     set (MPPDIR /home/swann/SDK/HI3516/MYMMP/mpp)
     set (COMMON_DIR   ${MPPDIR}/sample/common)
@@ -94,12 +96,62 @@ if(HI3516)
     target_link_libraries(vi_multichannel ${OpenCV_LIBS})
     target_link_libraries(vi_multichannel ${FFmpeg_LIBS})
     target_link_libraries(vi_multichannel ${HISI_LIBS} dl)
+
+    add_executable(vi_framebuffer  ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_FRAMEBUFFER_APP})
+    target_link_libraries(vi_framebuffer ${OpenCV_LIBS})
+    target_link_libraries(vi_framebuffer ${FFmpeg_LIBS})
+
 elseif(S5P6818)
+    #添加环境所需的头文件
+    MESSAGE(USE_S5P6818_LIB)
+    set(FFMPEGDIR /home/swann/SDK/EXYNOS6818/SDK/ffmpeg)
+    set(OPENCVDIR /home/swann/SDK/EXYNOS6818/SDK/opencv/install)
+    
+    list(APPEND FFmpeg_LIBS  avformat avdevice avcodec avutil avfilter postproc swscale swresample)
+    add_link_options(-L${FFMPEGDIR}/lib -lpthread)
+    list(APPEND OpenCV_LIBS   opencv_imgcodecs opencv_dnn opencv_imgproc opencv_core )
+    add_link_options(-L${OPENCVDIR}/lib)
+    include_directories (${FFMPEGDIR}/include)
+    include_directories (${OPENCVDIR}/include)
+
+    #添加平台摄像头文件夹
+    aux_source_directory(source/camera/camera_6124   PLATFROM_CAMERA)  
+    include_directories (source/camera/camera_6124)
+    #写入platform文件夹中nexell提供的库
+    set (NXPLIBSDIR   /home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library)
+    #写入内核所在位置
+    set (KERNDIR      /home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/kernel/kernel-3.4.39)
+    include_directories (${KERNDIR}/arch/arm/mach-s5p6818/include)
+    include_directories (${KERNDIR}/include)
+    include_directories (${NXPLIBSDIR}/src/libion)
+    include_directories (${NXPLIBSDIR}/src/libnxv4l2)
+    include_directories (${NXPLIBSDIR}/include/theoraparser)
+    include_directories (${NXPLIBSDIR}/include)
+    add_compile_options(-lz -lm -lrt -Wall -O2 -Wextra -Wcast-align -Wno-unused-parameter -Wshadow -Wwrite-strings -Wcast-qual -fno-strict-aliasing -fstrict-overflow -fsigned-char -fno-omit-frame-pointer -fno-optimize-sibling-calls -Wnon-virtual-dtor)
+    set(CMAKE_C_COMPILER "arm-cortex_a9-linux-gnueabi-gcc")
+    set(CMAKE_CXX_COMPILER "arm-cortex_a9-linux-gnueabi-g++")
+    
+    list(APPEND NXP_LIBS  ion v4l2-nexell m stdc++ nxvpu
+    nxdsp nxvip nxv4l2 nxvmem nxvidrc theoraparser
+    )
+    add_link_options(-L${NXPLIBSDIR}/lib 
+    -L${NXPLIBSDIR}/lib/ratecontrol
+    -L${NXPLIBSDIR}/src/libion
+    -L${NXPLIBSDIR}/src/libnxv4l2
+    )
+    
+    add_executable(vi_multichannel ${PLATFROM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_MUTILCHANNEL_APP})
+    target_link_libraries(vi_multichannel ${OpenCV_LIBS})
+    target_link_libraries(vi_multichannel ${FFmpeg_LIBS})
+    target_link_libraries(vi_multichannel ${NXP_LIBS} dl)
+
+    add_executable(vi_framebuffer  ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_FRAMEBUFFER_APP})
+    target_link_libraries(vi_framebuffer ${OpenCV_LIBS})
+    target_link_libraries(vi_framebuffer ${FFmpeg_LIBS})
+
 endif()
 
-add_executable(vi_framebuffer  ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_FRAMEBUFFER_APP})
-target_link_libraries(vi_framebuffer ${OpenCV_LIBS})
-target_link_libraries(vi_framebuffer ${FFmpeg_LIBS})
+
 
 
 

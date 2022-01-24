@@ -4,7 +4,7 @@
  * @Autor: YURI
  * @Date: 2022-01-24 00:46:05
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-24 06:06:54
+ * @LastEditTime: 2022-01-24 08:22:16
  */
 #include <iostream>
 #include <unistd.h>
@@ -18,8 +18,12 @@
 #include "camera.h"
 #include "camera_uvc/camera_uvc.h"
 #include "camera_gc2053/camera_gc2053.h"
-
-#define VIDEO_INDEX 0  
+#include "camera_6124/camera_6124.h"
+#ifdef S5P6818
+    #define VIDEO_INDEX 6  
+#else
+    #define VIDEO_INDEX 0 
+#endif
 #define FB_PATH     "/dev/fb0"
 using namespace std;
 using namespace cv;
@@ -63,7 +67,10 @@ int main(int argc ,void ** argv)
  #ifdef HI3516   
     plat_capture=new camera_gc2053(cap_plat.width,cap_plat.height,V4L2_PIX_FMT_NV21,VIDEO_INDEX);
  #endif
- 
+ #ifdef S5P6818   
+    plat_capture=new camera_6124(cap_plat.width,cap_plat.height,V4L2_PIX_FMT_NV21,VIDEO_INDEX);
+ #endif
+
     p=new framebuffer(FB_PATH);
     p->print_info();
     

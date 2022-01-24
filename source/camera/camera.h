@@ -3,7 +3,7 @@
  * @Autor: YURI
  * @Date: 2022-01-23 17:54:52
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-24 04:04:15
+ * @LastEditTime: 2022-01-24 08:13:13
  */
 #ifndef CAMERA_H
 #define CAMERA_H
@@ -35,7 +35,8 @@ public:
         this->piexlformat=piexlformat;
         this->videoindex=videoindex;
     }
-    ~camera(){};
+    //虚类需要虚析构函数，防止内存泄漏
+    virtual ~camera(){};
 
     virtual int camera_alloc_buffer(int count)= 0;
     virtual unsigned char* read_frame (void)= 0;

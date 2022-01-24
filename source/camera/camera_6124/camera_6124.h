@@ -3,7 +3,7 @@
  * @Autor: YURI
  * @Date: 2022-01-21 01:05:31
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-23 23:24:37
+ * @LastEditTime: 2022-01-24 08:17:26
  */
 #ifndef CAMERA_6124_H
 #define CAMERA_6124_H
@@ -29,7 +29,7 @@
 #include <linux/videodev2_nxp_media.h>
 #include <nxp-v4l2.h>
 #include <string>
-
+#include "camera.h"
 using namespace std;
 
 #define MAX_BUFFER_COUNT 4
@@ -43,29 +43,25 @@ using namespace std;
 #define YUV_YSTRIDE(w)   (ALIGN(w/2, YUV_STRIDE_ALIGN_FACTOR) * 2)
 #define YUV_VSTRIDE(h)   ALIGN(h, YUV_VSTRIDE_ALIGN_FACTOR)
 
-class camera
+class camera_6124:public camera
 {
 private:
+    int open_flag;
     int clipper_id ;
     int sensor_id ;
     int video_id ;
-    int format ;
-    int width;
-    int height;
     int ion_fd;
-    float fps;
     struct nxp_vid_buffer bufs[MAX_BUFFER_COUNT];
-    unsigned char* yuv420m_buf;//width*height*3/2的连续空间
     void CHECK_COMMAND(int command) ;
-    unsigned int yuv420m_get_size(int format, int num, int width, int height);
-    int yuv420m_alloc_buffers(int ion_fd, int count, struct nxp_vid_buffer *bufs, int width, int height, int format);
+    unsigned int yuv420m_get_size(int num, int width, int height);
 
 public:
-    camera(int width,int height);//初始化摄像节点
-    ~camera();
-    void waitquit(string str);
-    unsigned char* read_frame();
-    float get_fps(){return fps;}
+    camera_6124(int width,int height, int piexlformat,int videoindex);
+    virtual ~camera_6124();
+    virtual unsigned char* read_frame();
+    virtual int camera_alloc_buffer(int count);
+    virtual int camera_open(void);
+
 };
 
 #endif
