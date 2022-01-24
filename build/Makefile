@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/swann/SDK/HI3516/LinuxC/MEDIA
+CMAKE_SOURCE_DIR = /home/swann/SDK/EXYNOS6818/Driver/MEDIA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/swann/SDK/HI3516/LinuxC/MEDIA/build
+CMAKE_BINARY_DIR = /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles /home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -135,276 +135,6 @@ vi_multichannel: cmake_check_build_system
 vi_multichannel/fast:
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/build
 .PHONY : vi_multichannel/fast
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.o: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.o
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.o
-
-# target to build an object file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.o:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.o
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.o
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.i: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.i
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.i
-
-# target to preprocess a source file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.i:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.i
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.i
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.s: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.s
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.s
-
-# target to generate assembly for a file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.s:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.s
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.s
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.o: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.o
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.o
-
-# target to build an object file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.o:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.o
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.o
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.i: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.i
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.i
-
-# target to preprocess a source file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.i:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.i
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.i
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.s: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.s
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.s
-
-# target to generate assembly for a file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.s:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.s
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.s
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.o: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.o
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.o
-
-# target to build an object file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.o:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.o
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.o
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.i: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.i
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.i
-
-# target to preprocess a source file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.i:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.i
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.i
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.s: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.s
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.s
-
-# target to generate assembly for a file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.s:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.s
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.s
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.o: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.o
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.o
-
-# target to build an object file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.o:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.o
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.o
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.i: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.i
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.i
-
-# target to preprocess a source file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.i:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.i
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.i
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.s: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.s
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.s
-
-# target to generate assembly for a file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.s:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.s
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.s
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.o: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.o
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.o
-
-# target to build an object file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.o:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.o
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.o
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.i: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.i
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.i
-
-# target to preprocess a source file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.i:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.i
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.i
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.s: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.s
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.s
-
-# target to generate assembly for a file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.s:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.s
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.s
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.o: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.o
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.o
-
-# target to build an object file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.o:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.o
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.o
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.i: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.i
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.i
-
-# target to preprocess a source file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.i:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.i
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.i
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.s: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.s
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.s
-
-# target to generate assembly for a file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.s:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.s
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.s
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.o: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.o
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.o
-
-# target to build an object file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.o:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.o
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.o
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.i: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.i
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.i
-
-# target to preprocess a source file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.i:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.i
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.i
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.s: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.s
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.s
-
-# target to generate assembly for a file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.s:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.s
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.s
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.o: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.o
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.o
-
-# target to build an object file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.o:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.o
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.o
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.i: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.i
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.i
-
-# target to preprocess a source file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.i:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.i
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.i
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.s: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.s
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.s
-
-# target to generate assembly for a file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.s:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.s
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.s
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.o: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.o
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.o
-
-# target to build an object file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.o:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.o
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.o
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.i: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.i
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.i
-
-# target to preprocess a source file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.i:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.i
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.i
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.s: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.s
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.s
-
-# target to generate assembly for a file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.s:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.s
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.s
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.o: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.o
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.o
-
-# target to build an object file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.o:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.o
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.o
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.i: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.i
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.i
-
-# target to preprocess a source file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.i:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.i
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.i
-
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.s: home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.s
-
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.s
-
-# target to generate assembly for a file
-home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.s:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.s
-.PHONY : home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.s
 
 source/3rd_interface/ffmpeg/ffmpeg_sws.o: source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
 
@@ -466,32 +196,32 @@ source/3rd_interface/opencv/opencv_mat.cpp.s:
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
 .PHONY : source/3rd_interface/opencv/opencv_mat.cpp.s
 
-source/camera/camera_gc2053/camera_gc2053.o: source/camera/camera_gc2053/camera_gc2053.cpp.o
+source/camera/camera_6124/camera_6124.o: source/camera/camera_6124/camera_6124.cpp.o
 
-.PHONY : source/camera/camera_gc2053/camera_gc2053.o
+.PHONY : source/camera/camera_6124/camera_6124.o
 
 # target to build an object file
-source/camera/camera_gc2053/camera_gc2053.cpp.o:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.o
-.PHONY : source/camera/camera_gc2053/camera_gc2053.cpp.o
+source/camera/camera_6124/camera_6124.cpp.o:
+	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.o
+.PHONY : source/camera/camera_6124/camera_6124.cpp.o
 
-source/camera/camera_gc2053/camera_gc2053.i: source/camera/camera_gc2053/camera_gc2053.cpp.i
+source/camera/camera_6124/camera_6124.i: source/camera/camera_6124/camera_6124.cpp.i
 
-.PHONY : source/camera/camera_gc2053/camera_gc2053.i
+.PHONY : source/camera/camera_6124/camera_6124.i
 
 # target to preprocess a source file
-source/camera/camera_gc2053/camera_gc2053.cpp.i:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.i
-.PHONY : source/camera/camera_gc2053/camera_gc2053.cpp.i
+source/camera/camera_6124/camera_6124.cpp.i:
+	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.i
+.PHONY : source/camera/camera_6124/camera_6124.cpp.i
 
-source/camera/camera_gc2053/camera_gc2053.s: source/camera/camera_gc2053/camera_gc2053.cpp.s
+source/camera/camera_6124/camera_6124.s: source/camera/camera_6124/camera_6124.cpp.s
 
-.PHONY : source/camera/camera_gc2053/camera_gc2053.s
+.PHONY : source/camera/camera_6124/camera_6124.s
 
 # target to generate assembly for a file
-source/camera/camera_gc2053/camera_gc2053.cpp.s:
-	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.s
-.PHONY : source/camera/camera_gc2053/camera_gc2053.cpp.s
+source/camera/camera_6124/camera_6124.cpp.s:
+	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.s
+.PHONY : source/camera/camera_6124/camera_6124.cpp.s
 
 source/camera/camera_uvc/camera_uvc.o: source/camera/camera_uvc/camera_uvc.cpp.o
 
@@ -617,45 +347,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... vi_framebuffer"
 	@echo "... vi_multichannel"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.o"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.i"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.s"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.o"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.i"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.s"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.o"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.i"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.s"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.o"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.i"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.s"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.o"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.i"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.s"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.o"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.i"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.s"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.o"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.i"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.s"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.o"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.i"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.s"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.o"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.i"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.s"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.o"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.i"
-	@echo "... home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.s"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.o"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.i"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.s"
 	@echo "... source/3rd_interface/opencv/opencv_mat.o"
 	@echo "... source/3rd_interface/opencv/opencv_mat.i"
 	@echo "... source/3rd_interface/opencv/opencv_mat.s"
-	@echo "... source/camera/camera_gc2053/camera_gc2053.o"
-	@echo "... source/camera/camera_gc2053/camera_gc2053.i"
-	@echo "... source/camera/camera_gc2053/camera_gc2053.s"
+	@echo "... source/camera/camera_6124/camera_6124.o"
+	@echo "... source/camera/camera_6124/camera_6124.i"
+	@echo "... source/camera/camera_6124/camera_6124.s"
 	@echo "... source/camera/camera_uvc/camera_uvc.o"
 	@echo "... source/camera/camera_uvc/camera_uvc.i"
 	@echo "... source/camera/camera_uvc/camera_uvc.s"

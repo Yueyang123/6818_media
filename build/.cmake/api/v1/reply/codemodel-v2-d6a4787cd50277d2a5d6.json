@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "MinSizeRel",
+			"name" : "",
 			"projects" : 
 			[
 				{
@@ -40,14 +40,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "vi_framebuffer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-vi_framebuffer-MinSizeRel-57c6c02cfa0f1e3dca26.json",
+					"jsonFile" : "target-vi_framebuffer-32e1696107557383c84c.json",
 					"name" : "vi_framebuffer",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "vi_multichannel::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-vi_multichannel-MinSizeRel-f33531f860ab6fac2c95.json",
+					"jsonFile" : "target-vi_multichannel-3407ddd62aaa2860979f.json",
 					"name" : "vi_multichannel",
 					"projectIndex" : 0
 				}
@@ -57,8 +57,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/swann/SDK/HI3516/LinuxC/MEDIA/build",
-		"source" : "/home/swann/SDK/HI3516/LinuxC/MEDIA"
+		"build" : "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build",
+		"source" : "/home/swann/SDK/EXYNOS6818/Driver/MEDIA"
 	},
 	"version" : 
 	{

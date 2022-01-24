@@ -1,74 +1,39 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
   "CXX"
   )
 # The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/loadbmp.c.o"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_audio.c.o"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_isp.c.o"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_region.c.o"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_sys.c.o"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vdec.c.o"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_venc.c.o"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vi.c.o"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vo.c.o"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/home/swann/SDK/HI3516/MYMMP/mpp/sample/common/sample_comm_vpss.c.o"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_C
-  "HI3516"
-  )
-
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../ffmpeg/include"
-  "../opencv/include"
-  "../source/camera/camera_uvc"
-  "../source/camera"
-  "../source/3rd_interface/ffmpeg"
-  "../source/3rd_interface/opencv"
-  "../source/framebuffer"
-  "../opencv/include/opencv"
-  "../source/camera/camera_gc2053"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/include"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/audio/adp"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/vio"
-  )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o"
-  "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/3rd_interface/opencv/opencv_mat.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o"
-  "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/camera/camera_gc2053/camera_gc2053.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.o"
-  "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/camera/camera_uvc/camera_uvc.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o"
-  "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/example/vi_multichannel.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.o"
-  "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/framebuffer/framebuffer.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.o"
+  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o"
+  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/opencv/opencv_mat.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o"
+  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_6124/camera_6124.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.o"
+  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_uvc/camera_uvc.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o"
+  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/vi_multichannel.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.o"
+  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/framebuffer/framebuffer.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "HI3516"
+  "S5P6818"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../ffmpeg/include"
-  "../opencv/include"
   "../source/camera/camera_uvc"
   "../source/camera"
   "../source/3rd_interface/ffmpeg"
   "../source/3rd_interface/opencv"
   "../source/framebuffer"
-  "../opencv/include/opencv"
-  "../source/camera/camera_gc2053"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/include"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/audio/adp"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/vio"
+  "/home/swann/SDK/EXYNOS6818/SDK/ffmpeg/include"
+  "/home/swann/SDK/EXYNOS6818/SDK/opencv/install/include"
+  "../source/camera/camera_6124"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/kernel/kernel-3.4.39/arch/arm/mach-s5p6818/include"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/kernel/kernel-3.4.39/include"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/src/libion"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/src/libnxv4l2"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/include/theoraparser"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/include"
   )
 
 # Targets to which this target links.
