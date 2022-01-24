@@ -109,18 +109,18 @@ CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s: cmak
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s"
 	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/HI3516/LinuxC/MEDIA/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp -o CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
 
-CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.o: CMakeFiles/vi_framebuffer.dir/flags.make
-CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.o: ../source/example/vi_framebuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.o"
-	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.o -c /home/swann/SDK/HI3516/LinuxC/MEDIA/source/example/vi_framebuffer.cpp
+CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.o: CMakeFiles/vi_framebuffer.dir/flags.make
+CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.o: ../source/example/vi_uvc_framebuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.o"
+	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.o -c /home/swann/SDK/HI3516/LinuxC/MEDIA/source/example/vi_uvc_framebuffer.cpp
 
-CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.i"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/HI3516/LinuxC/MEDIA/source/example/vi_framebuffer.cpp > CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.i
+CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.i"
+	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/HI3516/LinuxC/MEDIA/source/example/vi_uvc_framebuffer.cpp > CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.i
 
-CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.s"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/HI3516/LinuxC/MEDIA/source/example/vi_framebuffer.cpp -o CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.s
+CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.s"
+	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/HI3516/LinuxC/MEDIA/source/example/vi_uvc_framebuffer.cpp -o CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.s
 
 # Object files for target vi_framebuffer
 vi_framebuffer_OBJECTS = \
@@ -128,7 +128,7 @@ vi_framebuffer_OBJECTS = \
 "CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.o" \
 "CMakeFiles/vi_framebuffer.dir/source/3rd_interface/opencv/opencv_mat.cpp.o" \
 "CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o" \
-"CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.o"
+"CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.o"
 
 # External object files for target vi_framebuffer
 vi_framebuffer_EXTERNAL_OBJECTS =
@@ -137,7 +137,7 @@ vi_framebuffer_EXTERNAL_OBJECTS =
 ../bin/vi_framebuffer: CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.o
 ../bin/vi_framebuffer: CMakeFiles/vi_framebuffer.dir/source/3rd_interface/opencv/opencv_mat.cpp.o
 ../bin/vi_framebuffer: CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
-../bin/vi_framebuffer: CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.o
+../bin/vi_framebuffer: CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.o
 ../bin/vi_framebuffer: CMakeFiles/vi_framebuffer.dir/build.make
 ../bin/vi_framebuffer: ../opencv/lib/libopencv_video.so.2.4.9
 ../bin/vi_framebuffer: ../opencv/lib/libopencv_photo.so.2.4.9

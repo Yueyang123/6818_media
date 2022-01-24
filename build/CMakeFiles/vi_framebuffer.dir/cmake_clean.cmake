@@ -4,7 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o"
   "CMakeFiles/vi_framebuffer.dir/source/3rd_interface/opencv/opencv_mat.cpp.o"
   "CMakeFiles/vi_framebuffer.dir/source/camera/camera_uvc/camera_uvc.cpp.o"
-  "CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.o"
+  "CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.o"
   "CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.o"
 )
 

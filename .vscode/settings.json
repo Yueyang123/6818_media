@@ -43,7 +43,9 @@
         "list": "cpp",
         "string": "cpp",
         "vector": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "array": "cpp",
+        "string_view": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

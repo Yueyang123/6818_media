@@ -3,7 +3,7 @@
  * @Autor: YURI
  * @Date: 2022-01-21 01:05:31
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-21 01:05:32
+ * @LastEditTime: 2022-01-24 05:55:10
  */
 #include "ffmpeg_sws.h"
 
@@ -11,8 +11,8 @@
  ffmpeg_sws_interface:: ffmpeg_sws_interface(int iwidth,int iheight,AVPixelFormat isrc_format,AVPixelFormat idst_format)
 :width(iwidth),height(iheight),src_format(isrc_format),dst_format(idst_format)
 {
-    AVFrame  *frmsrc = av_frame_alloc();
-    AVFrame  *frmdst = av_frame_alloc();
+    frmsrc = av_frame_alloc();
+    frmdst = av_frame_alloc();
     sws = sws_getContext(width, height, src_format, width,height, dst_format,
                                             SWS_BILINEAR, NULL, NULL, NULL);
 

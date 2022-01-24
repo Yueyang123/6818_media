@@ -84,7 +84,7 @@ CMakeFiles/vi_framebuffer.dir/source/camera/camera_uvc/camera_uvc.cpp.o
  ../source/camera/camera.h
  /home/swann/SDK/HI3516/LinuxC/MEDIA/source/camera/camera_uvc/camera_uvc.cpp
  /home/swann/SDK/HI3516/LinuxC/MEDIA/source/camera/camera_uvc/camera_uvc.h
-CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.o
+CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.o
  ../ffmpeg/include/libavcodec/avcodec.h
  ../ffmpeg/include/libavformat/avformat.h
  ../ffmpeg/include/libavformat/avio.h
@@ -136,7 +136,7 @@ CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.o
  ../source/camera/camera.h
  ../source/camera/camera_uvc/camera_uvc.h
  ../source/framebuffer/framebuffer.h
- /home/swann/SDK/HI3516/LinuxC/MEDIA/source/example/vi_framebuffer.cpp
+ /home/swann/SDK/HI3516/LinuxC/MEDIA/source/example/vi_uvc_framebuffer.cpp
 CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.o
  /home/swann/SDK/HI3516/LinuxC/MEDIA/source/framebuffer/framebuffer.cpp
  /home/swann/SDK/HI3516/LinuxC/MEDIA/source/framebuffer/framebuffer.h

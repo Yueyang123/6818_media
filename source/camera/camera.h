@@ -3,7 +3,7 @@
  * @Autor: YURI
  * @Date: 2022-01-23 17:54:52
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-23 23:48:07
+ * @LastEditTime: 2022-01-24 04:04:15
  */
 #ifndef CAMERA_H
 #define CAMERA_H
@@ -36,10 +36,7 @@ public:
         this->videoindex=videoindex;
     }
     ~camera(){};
-    virtual int camera_get_capability(void)= 0;
-    virtual void camera_show_capability(void)= 0;
-    virtual int camera_get_format(void)= 0;
-    virtual int camera_set_format(int piexlformat,int width,int height)= 0;
+
     virtual int camera_alloc_buffer(int count)= 0;
     virtual unsigned char* read_frame (void)= 0;
     virtual int camera_open(void)= 0;

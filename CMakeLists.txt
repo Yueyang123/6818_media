@@ -28,7 +28,7 @@ aux_source_directory(source/3rd_interface/ffmpeg BASE4_SRC)
 set(CMAKE_PREFIX_PATH "./opencv")
 find_package(OpenCV REQUIRED)
 list(APPEND FFmpeg_LIBS  avformat avdevice avcodec avutil avfilter postproc swscale swresample)
-add_link_options(-L${FFMPEGDIR}/lib)
+add_link_options(-L${FFMPEGDIR}/lib -lpthread)
 
 option(HI3516 "USE HI3516 LIB" ON)
 option(S5P6818 "USE S5P6818 LIB" OFF)
@@ -54,6 +54,13 @@ if(HI3516)
     include_directories (${MPPDIR}/sample/audio/adp)
     include_directories (${MPPDIR}/sample/common)
     include_directories (${MPPDIR}/sample/vio)
+    
+    list(APPEND HISI_LIBS  isp mpi hdmi sns_gc2053 dnvqe VoiceEngine upvqe securec securec
+    sns_imx327 sns_imx327_2l sns_imx307 sns_imx307_2l sns_imx458 sns_mn34220
+    sns_os05a sns_os08a10 sns_sc4210 sns_ov12870 sns_os04b10 sns_imx415 
+    sns_imx219 sns_imx274 sns_imx335 _hiae _hidehaze _hildci _hiawb _hidrc _hicalcflicker)
+    add_link_options(-L${HISILIB})
+
 
     add_compile_options(
     -lpthread -lm -ldl -DISP_V2 -lstdc++ -Wall -mcpu=cortex-a7 -mfloat-abi=softfp 
@@ -78,12 +85,15 @@ if(HI3516)
 	${HISILIB}/libsns_sc4210.a  ${HISILIB}/libsns_ov12870.a 
 	${HISILIB}/libsns_os04b10.a ${HISILIB}/libsns_imx415.a 
 	${HISILIB}/libsns_imx219.a  ${HISILIB}/libsns_imx274.a 
- 	${HISILIB}/libsecurec.a 	${HISILIB}/libsns_imx335.a 
+	${HISILIB}/libsns_imx335.a 
 	-Wl,--end-group) 
     set(CMAKE_C_COMPILER "arm-himix200-linux-gcc")
     set(CMAKE_CXX_COMPILER "arm-himix200-linux-g++")
 
-
+    add_executable(vi_multichannel  ${COMMON_SRC} ${PLATFROM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_MUTILCHANNEL_APP})
+    target_link_libraries(vi_multichannel ${OpenCV_LIBS})
+    target_link_libraries(vi_multichannel ${FFmpeg_LIBS})
+    target_link_libraries(vi_multichannel ${HISI_LIBS} dl)
 elseif(S5P6818)
 endif()
 
@@ -91,8 +101,6 @@ add_executable(vi_framebuffer  ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SR
 target_link_libraries(vi_framebuffer ${OpenCV_LIBS})
 target_link_libraries(vi_framebuffer ${FFmpeg_LIBS})
 
-add_executable(vi_multichannel  ${PLATFROM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_MUTILCHANNEL_APP})
-target_link_libraries(vi_multichannel ${OpenCV_LIBS})
-target_link_libraries(vi_multichannel ${FFmpeg_LIBS})
+
 
 

@@ -14,7 +14,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -29,7 +30,8 @@
 					"name" : "MUTIL_MEDIA",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "vi_framebuffer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-vi_framebuffer-MinSizeRel-2545880de3ea95971a01.json",
+					"jsonFile" : "target-vi_framebuffer-MinSizeRel-57c6c02cfa0f1e3dca26.json",
 					"name" : "vi_framebuffer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vi_multichannel::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vi_multichannel-MinSizeRel-f33531f860ab6fac2c95.json",
+					"name" : "vi_multichannel",
 					"projectIndex" : 0
 				}
 			]

@@ -3,10 +3,11 @@
  * @Autor: YURI
  * @Date: 2022-01-24 01:26:47
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-24 01:58:15
+ * @LastEditTime: 2022-01-24 04:02:14
  */
 #include "camera_gc2053.h"
 #include "sample_comm.h"
+#include <linux/videodev2.h>
 /**
  * @description: camera_gc2053初始化
  * @param {int} width
@@ -19,6 +20,8 @@
 camera_gc2053::camera_gc2053(int width,int height, int piexlformat,int videoindex):
 camera(width,height, piexlformat, videoindex)
 {
+    open_flag=0;
+    printf("INIT CAMERA \r\n");
     if(piexlformat!=V4L2_PIX_FMT_NV21){
         open_flag=-1;
         printf("DONT SURPORT THIS FORMAT \r\n");
@@ -49,7 +52,7 @@ camera_gc2053::~camera_gc2053()
  * @author: YURI
  */
 int camera_gc2053::camera_alloc_buffer(int count){
-    frame=(unsigned char*)malloc(capture_width*capture_height*3/2);
+    frame=(unsigned char*)malloc(width*height*3/2);
     if(frame!=NULL)return 1;
     else return -1;
 }
@@ -81,5 +84,8 @@ unsigned char* camera_gc2053::read_frame (void){
  */
 int camera_gc2053 ::camera_open(void){
     if(open_flag==-1)printf("OPEN CAMERA ERROR ,PLEASE CHECK PARAM !!!\r\n");
-    else printf("OPENCV CAMERA SUCCESS \r\n");
+    else{
+        printf("OPENCV CAMERA SUCCESS \r\n");
+        camera_alloc_buffer(0);
+    } 
 }

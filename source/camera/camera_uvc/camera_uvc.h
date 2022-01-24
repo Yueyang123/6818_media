@@ -3,7 +3,7 @@
  * @Autor: YURI
  * @Date: 2022-01-21 01:05:31
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-23 23:38:37
+ * @LastEditTime: 2022-01-24 04:04:36
  */
 #ifndef CAMERA_UVC
 #define CAMERA_UVC
@@ -49,10 +49,10 @@ private:
 public:
     camera_uvc(int width,int height, int piexlformat,int videoindex);
     ~camera_uvc();
-    virtual int camera_get_capability(void);
-    virtual void camera_show_capability(void);
-    virtual int camera_get_format(void);
-    virtual int camera_set_format(int piexlformat,int width,int height);
+     int camera_get_capability(void);
+     void camera_show_capability(void);
+     int camera_get_format(void);
+     int camera_set_format(int piexlformat,int width,int height);
     virtual int camera_alloc_buffer(int count);
     virtual unsigned char* read_frame (void);
     virtual int camera_open(void);

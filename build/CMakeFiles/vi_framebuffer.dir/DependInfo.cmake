@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o"
   "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/3rd_interface/opencv/opencv_mat.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_framebuffer.dir/source/3rd_interface/opencv/opencv_mat.cpp.o"
   "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/camera/camera_uvc/camera_uvc.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_framebuffer.dir/source/camera/camera_uvc/camera_uvc.cpp.o"
-  "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/example/vi_framebuffer.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_framebuffer.dir/source/example/vi_framebuffer.cpp.o"
+  "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/example/vi_uvc_framebuffer.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.o"
   "/home/swann/SDK/HI3516/LinuxC/MEDIA/source/framebuffer/framebuffer.cpp" "/home/swann/SDK/HI3516/LinuxC/MEDIA/build/CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -27,6 +27,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../source/3rd_interface/opencv"
   "../source/framebuffer"
   "../opencv/include/opencv"
+  "../source/camera/camera_gc2053"
   "/home/swann/SDK/HI3516/MYMMP/mpp/include"
   "/home/swann/SDK/HI3516/MYMMP/mpp/sample/audio/adp"
   "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common"

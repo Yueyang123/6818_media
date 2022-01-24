@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Autor: YURI
+ * @Date: 2022-01-23 01:57:31
+ * @LastEditors: YURI
+ * @LastEditTime: 2022-01-24 05:55:56
+ */
 #ifndef FFMPEG_SWS_INTERFACE
 #define FFMPEG_SWS_INTERFACE
 extern "C"{
