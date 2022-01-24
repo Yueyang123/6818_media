@@ -5,8 +5,6 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/ffmpeg/include",
-                "${workspaceFolder}/source/camera/camera_uvc",
-                "${workspaceFolder}/source/camera/camera_6124",
                 "${workspaceFolder}/source/camera",
                 "${workspaceFolder}/opencv/include",
                 "${workspaceFolder}/source/3rd_interface/ffmpeg",
@@ -16,16 +14,14 @@
                 "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/include",
                 "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/src/libion",
                 "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/src/libnxv4l2",
-                "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/kernel/include",
-                "/usr/include/linux"
+                "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/kernel/include"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            //"compilerPath": "/home/swann/SDK/EXYNOS6818/Compiler/arm-cortex_a9-eabi-4.7-eglibc-2.18/bin/arm-cortex_a9-linux-gnueabi-g++",
-            "compilerPath": "/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc",
+            "compilerPath": "/home/swann/SDK/EXYNOS6818/Compiler/arm-cortex_a9-eabi-4.7-eglibc-2.18/bin/arm-cortex_a9-linux-gnueabi-g++",
             "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],

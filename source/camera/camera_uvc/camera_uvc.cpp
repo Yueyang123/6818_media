@@ -3,7 +3,7 @@
  * @Autor: YURI
  * @Date: 2022-01-21 01:05:31
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-23 23:09:58
+ * @LastEditTime: 2022-01-24 01:39:21
  */
 #include "camera_uvc.h"
 #include "time.h"
@@ -69,6 +69,8 @@ int camera_uvc::camera_alloc_buffer(int count)
     int ret=0;
     struct v4l2_buffer buf;
     memset (&(req), 0, sizeof (req));
+    frame=(unsigned char *)malloc(width*height*3);
+    if(frame==NULL)printf("GET MEMORY ERROR \r\n");
     req.count = count;
     req.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
     req.memory = V4L2_MEMORY_MMAP;
@@ -108,8 +110,6 @@ int camera_uvc::camera_open(void)
     char buf[20];
     sprintf(buf,"/dev/video%d",videoindex);
     video_fd = open (buf, O_RDWR | O_NONBLOCK, 0);
-    frame=(unsigned char *)malloc(width*height*3);
-    if(frame==NULL)printf("GET MEMORY ERROR \r\n");
     //获取摄像头基本信息
     camera_get_capability();
     //显示摄像头基本信息  

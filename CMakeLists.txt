@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.2)
 project(MUTIL_MEDIA)
 
+#设置两个库所在位置
 set(FFMPEGDIR /home/swann/SDK/HI3516/LinuxC/MEDIA/ffmpeg)
-set(OPENCVDIR opencv)
+set(OPENCVDIR /home/swann/SDK/HI3516/LinuxC/MEDIA/opencv)
 
 #设置头文件目录
 include_directories (ffmpeg/include)
@@ -13,8 +14,8 @@ include_directories (source/3rd_interface/ffmpeg)
 include_directories (source/3rd_interface/opencv)
 include_directories (source/framebuffer)
 #设置应用程序源码
-set (VI_FRAMEBUFFER_APP source/example/vi_framebuffer.cpp )
-
+set (VI_FRAMEBUFFER_APP source/example/vi_uvc_framebuffer.cpp )
+set (VI_MUTILCHANNEL_APP source/example/vi_multichannel.cpp )
 
 #设置程序输出路径
 set (EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
@@ -39,7 +40,12 @@ if (S5P6818)
 endif()
 
 if(HI3516)
+    #添加环境所需的头文件
     MESSAGE(USE_HI3516_LIB)
+    #添加平台摄像头文件夹
+    aux_source_directory(source/camera/camera_gc2053   PLATFROM_CAMERA)  
+    include_directories (source/camera/camera_gc2053)
+
     set (MPPDIR /home/swann/SDK/HI3516/MYMMP/mpp)
     set (COMMON_DIR   ${MPPDIR}/sample/common)
     set (HISILIB      ${MPPDIR}/lib)
@@ -48,7 +54,7 @@ if(HI3516)
     include_directories (${MPPDIR}/sample/audio/adp)
     include_directories (${MPPDIR}/sample/common)
     include_directories (${MPPDIR}/sample/vio)
-    
+
     add_compile_options(
     -lpthread -lm -ldl -DISP_V2 -lstdc++ -Wall -mcpu=cortex-a7 -mfloat-abi=softfp 
     -mfpu=neon-vfpv4 -fno-aggressive-loop-optimizations -ldl -ffunction-sections -fdata-sections 
@@ -84,5 +90,9 @@ endif()
 add_executable(vi_framebuffer  ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_FRAMEBUFFER_APP})
 target_link_libraries(vi_framebuffer ${OpenCV_LIBS})
 target_link_libraries(vi_framebuffer ${FFmpeg_LIBS})
+
+add_executable(vi_multichannel  ${PLATFROM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_MUTILCHANNEL_APP})
+target_link_libraries(vi_multichannel ${OpenCV_LIBS})
+target_link_libraries(vi_multichannel ${FFmpeg_LIBS})
 
 

@@ -4,19 +4,19 @@
  * @Autor: YURI
  * @Date: 2022-01-20 00:28:05
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-23 23:52:43
+ * @LastEditTime: 2022-01-24 01:08:41
  */
 #include <iostream>
 #include <unistd.h>
 #include <stdio.h>
 #include <sys/wait.h>
 #include <sys/types.h>
-#include "camera_uvc.h" 
 #include "ffmpeg_sws.h"
 #include "opencv_mat.h"
 #include "framebuffer.h"
 #include <string.h>
 #include "camera.h"
+#include "camera_uvc/camera_uvc.h"
 using namespace std;
 FILE* yuv_file_fd;
 camera* capture;
