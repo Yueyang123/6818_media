@@ -9,10 +9,6 @@
 #include "MediaExtractor.h"
 #include "CodecInfo.h"
 #include "Util.h"
-
-#ifdef ANDROID
-#include "NX_AndroidRenderer.h"
-#else
 #include "nx_dsp.h"
 #endif
 
@@ -66,16 +62,6 @@ int32_t VpuDecMain( CODEC_APP_DATA *pAppData )
 		fpOut = fopen( pAppData->outFileName, "wb" );
 	}
 
-#ifdef ANDROID
-	CNX_AndroidRenderer *pAndRender = new CNX_AndroidRenderer(WINDOW_WIDTH, WINDOW_HEIGHT);
-	NX_VID_MEMORY_HANDLE *pMemHandle;
-	pAndRender->GetBuffers(NUMBER_OF_BUFFER, imgWidth, imgHeight, &pMemHandle );
-	NX_VID_MEMORY_HANDLE hVideoMemory[NUMBER_OF_BUFFER];
-	for( int32_t i=0 ; i<NUMBER_OF_BUFFER ; i++ )
-	{
-		hVideoMemory[i] = pMemHandle[i];
-	}
-#else
 	//	Linux
 	DISPLAY_HANDLE hDsp;
 	DISPLAY_INFO dspInfo;
@@ -99,12 +85,8 @@ int32_t VpuDecMain( CODEC_APP_DATA *pAppData )
 		printf("Display Failed!!!\n");
 		exit(-1);
 	}
-#endif	//	ANDROID
-
 	pMediaReader->GetCodecTagId( AVMEDIA_TYPE_VIDEO, &codecTag, &codecId  );
-
 	vpuCodecType = (VID_TYPE_E)(CodecIdToVpuType(codecId, codecTag));
-
 	mp4Class = fourCCToMp4Class( codecTag );
 	if( mp4Class == -1 )
 		mp4Class = codecIdToMp4Class( codecId );
@@ -141,11 +123,7 @@ int32_t VpuDecMain( CODEC_APP_DATA *pAppData )
 			seqIn.seqSize = seqSize + size;
 			seqIn.enableUserData = 0;
 			seqIn.disableOutReorder = 0;
-#ifdef ANDROID
-			//	Use External Video Memory
-			seqIn.numBuffers = NUMBER_OF_BUFFER;
-			seqIn.pMemHandle = &hVideoMemory[0];
-#endif
+
 
 			vidRet = NX_VidDecParseVideoCfg(hDec, &seqIn, &seqOut);
 			printf("Parser Return = %d(%d) \n", vidRet, seqOut.unsupportedFeature );
@@ -216,42 +194,6 @@ int32_t VpuDecMain( CODEC_APP_DATA *pAppData )
 		decIn.timeStamp = timeStamp;
 		decIn.eos = ( decIn.strmSize > 0 || frameCount == 0 ) ? (0) : (1);
 
-#ifdef _ERROR_AND_SEEK_
-		if ( (decOut.outFrmReliable_0_100[DEC_DECODED_FRAME] != 100) && (decOut.outDecIdx >= 0) && (decIn.strmSize > 0) && (frameCount > 0) )
-		{
-			int32_t iFrameType;
-			int32_t iCheckType = ( vpuCodecType == NX_AVC_DEC ) ? ( PIC_TYPE_IDR ) : ( PIC_TYPE_I );
-
-			NX_VidDecGetFrameType( vpuCodecType, &decIn, &iFrameType );
-			printf("[%d] Get Type = %d, size = %d \n", frameCount, iFrameType, size );
-
-			if ( iFrameType != iCheckType )
-			{
-				size = 0;
-				frameCount++;
-				continue;
-			}
-			else
-			{
-				brokenB = 0;
-				iPrevIdx = -1;
-			}
-		}
-
-		if ( brokenB < 2 )
-		{
-			int32_t iFrameType;
-
-			NX_VidDecGetFrameType( vpuCodecType, &decIn, &iFrameType );
-			if ( iFrameType == PIC_TYPE_B )
-			{
-				size = 0;
-				frameCount++;
-				continue;
-			}
-		}
-#endif
-
 		startTime = NX_GetTickCount();
 		vidRet = NX_VidDecDecodeFrame( hDec, &decIn, &decOut );
 		endTime = NX_GetTickCount();
@@ -269,32 +211,8 @@ int32_t VpuDecMain( CODEC_APP_DATA *pAppData )
 			exit(-2);
 		}
 
-#ifdef _ERROR_AND_SEEK_
-		if ( (brokenB < 2) && (decOut.outDecIdx >= 0) )
-		{
-			int32_t iFrameType;
-
-			NX_VidDecGetFrameType( vpuCodecType, &decIn, &iFrameType );
-			if ( (iFrameType == PIC_TYPE_I) || (iFrameType == PIC_TYPE_P) || (iFrameType == PIC_TYPE_IDR) )
-			{
-				if ( iPrevIdx != decOut.outDecIdx )
-				{
-					brokenB++;
-				}
-				iPrevIdx = decOut.outDecIdx;
-			}
-		}
-#endif
-
 		if( decOut.outImgIdx >= 0  )
 		{
-#ifdef ANDROID
-			pAndRender->DspQueueBuffer( NULL, decOut.outImgIdx );
-			if( prevIdx != -1 )
-			{
-				pAndRender->DspDequeueBuffer(NULL, NULL);
-			}
-#else
 			NX_DspQueueBuffer( hDsp, &decOut.outImg );
 			if( outCount != 0 )
 			{
@@ -335,23 +253,10 @@ int32_t VpuDecMain( CODEC_APP_DATA *pAppData )
 			outCount ++;
 		}
 		else if ( decIn.eos == 1)		break;
-
-#ifdef _ERROR_AND_SEEK_
-		if ( (decOut.outFrmReliable_0_100[DEC_DECODED_FRAME] != 100) && (decOut.outDecIdx >= 0) )
-		{
-			NX_VidDecFlush( hDec );
-		}
-#endif
-
 		frameCount++;
 	}
 
 	NX_VidDecClose( hDec );
-
-#ifdef ANDROID
-	if( pAndRender )
-		delete pAndRender;
-#else
 	if( hDsp )
 		NX_DspClose(hDsp);
 

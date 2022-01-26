@@ -17,8 +17,8 @@
 
 //#define	DISPLAY_ONLY
 
-#define	IMAGE_WIDTH		800*2
-#define	IMAGE_HEIGHT	600*2
+#define	IMAGE_WIDTH		1920*2
+#define	IMAGE_HEIGHT	1080*2
 //#define	IMAGE_STRIDE	(((IMAGE_WIDTH+63)>>6)<<6)		//	Interlace Camera
 #define	IMAGE_STRIDE	(((IMAGE_WIDTH+15)>>4)<<4)			//	Encoder Needs 16 Aligned Memory
 
@@ -105,8 +105,8 @@ int32_t VpuJpgMain( CODEC_APP_DATA *pAppData )
 	fdOut = fopen( pAppData->outFileName, "wb" );
 
 	//	Initailize VIP & Display
-	dspInfo.port = DISPLAY_PORT_LCD;
-//	dspInfo.port = DISPLAY_PORT_HDMI;
+	//dspInfo.port = DISPLAY_PORT_LCD;
+	dspInfo.port = DISPLAY_PORT_HDMI;
 	dspInfo.module = 0;
 	dspInfo.width = cropW;
 	dspInfo.height = cropH;

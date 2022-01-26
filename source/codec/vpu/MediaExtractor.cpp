@@ -361,7 +361,7 @@ CMediaReader::~CMediaReader()
 			m_AudioStream = NULL;
 		}
 
-		av_close_input_file( m_pFormatCtx );
+		//av_close_input_file( m_pFormatCtx );
 		//free( m_pFormatCtx );
 #endif
 	}
@@ -479,7 +479,7 @@ ErrorExit:
 		avformat_close_input( &fmt_ctx );
 #else
 		//	Linux Old Version FFMPEG
-		av_close_input_file( fmt_ctx );
+		//av_close_input_file( fmt_ctx );
 		free( fmt_ctx );
 #endif
 	}
@@ -507,7 +507,7 @@ void CMediaReader::CloseFile()
 			m_AudioStream = NULL;
 		}
 		//	Linux Old Version FFMPEG
-		av_close_input_file( m_pFormatCtx );
+		//av_close_input_file( m_pFormatCtx );
 		free( m_pFormatCtx );
 #endif
 		m_pFormatCtx = NULL;

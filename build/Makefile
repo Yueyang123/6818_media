@@ -136,6 +136,19 @@ vi_multichannel/fast:
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/build
 .PHONY : vi_multichannel/fast
 
+#=============================================================================
+# Target rules for targets named vpss_encode
+
+# Build rule for target.
+vpss_encode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vpss_encode
+.PHONY : vpss_encode
+
+# fast build rule for target.
+vpss_encode/fast:
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/build
+.PHONY : vpss_encode/fast
+
 source/3rd_interface/ffmpeg/ffmpeg_sws.o: source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
 
 .PHONY : source/3rd_interface/ffmpeg/ffmpeg_sws.o
@@ -144,6 +157,7 @@ source/3rd_interface/ffmpeg/ffmpeg_sws.o: source/3rd_interface/ffmpeg/ffmpeg_sws
 source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
 .PHONY : source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
 
 source/3rd_interface/ffmpeg/ffmpeg_sws.i: source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i
@@ -154,6 +168,7 @@ source/3rd_interface/ffmpeg/ffmpeg_sws.i: source/3rd_interface/ffmpeg/ffmpeg_sws
 source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i
 .PHONY : source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i
 
 source/3rd_interface/ffmpeg/ffmpeg_sws.s: source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
@@ -164,6 +179,7 @@ source/3rd_interface/ffmpeg/ffmpeg_sws.s: source/3rd_interface/ffmpeg/ffmpeg_sws
 source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
 .PHONY : source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
 
 source/3rd_interface/opencv/opencv_mat.o: source/3rd_interface/opencv/opencv_mat.cpp.o
@@ -174,6 +190,7 @@ source/3rd_interface/opencv/opencv_mat.o: source/3rd_interface/opencv/opencv_mat
 source/3rd_interface/opencv/opencv_mat.cpp.o:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/opencv/opencv_mat.cpp.o
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/3rd_interface/opencv/opencv_mat.cpp.o
 .PHONY : source/3rd_interface/opencv/opencv_mat.cpp.o
 
 source/3rd_interface/opencv/opencv_mat.i: source/3rd_interface/opencv/opencv_mat.cpp.i
@@ -184,6 +201,7 @@ source/3rd_interface/opencv/opencv_mat.i: source/3rd_interface/opencv/opencv_mat
 source/3rd_interface/opencv/opencv_mat.cpp.i:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/opencv/opencv_mat.cpp.i
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.i
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/3rd_interface/opencv/opencv_mat.cpp.i
 .PHONY : source/3rd_interface/opencv/opencv_mat.cpp.i
 
 source/3rd_interface/opencv/opencv_mat.s: source/3rd_interface/opencv/opencv_mat.cpp.s
@@ -194,6 +212,7 @@ source/3rd_interface/opencv/opencv_mat.s: source/3rd_interface/opencv/opencv_mat
 source/3rd_interface/opencv/opencv_mat.cpp.s:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
 .PHONY : source/3rd_interface/opencv/opencv_mat.cpp.s
 
 source/camera/camera_6124/camera_6124.o: source/camera/camera_6124/camera_6124.cpp.o
@@ -203,6 +222,7 @@ source/camera/camera_6124/camera_6124.o: source/camera/camera_6124/camera_6124.c
 # target to build an object file
 source/camera/camera_6124/camera_6124.cpp.o:
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.o
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/camera/camera_6124/camera_6124.cpp.o
 .PHONY : source/camera/camera_6124/camera_6124.cpp.o
 
 source/camera/camera_6124/camera_6124.i: source/camera/camera_6124/camera_6124.cpp.i
@@ -212,6 +232,7 @@ source/camera/camera_6124/camera_6124.i: source/camera/camera_6124/camera_6124.c
 # target to preprocess a source file
 source/camera/camera_6124/camera_6124.cpp.i:
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.i
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/camera/camera_6124/camera_6124.cpp.i
 .PHONY : source/camera/camera_6124/camera_6124.cpp.i
 
 source/camera/camera_6124/camera_6124.s: source/camera/camera_6124/camera_6124.cpp.s
@@ -221,6 +242,7 @@ source/camera/camera_6124/camera_6124.s: source/camera/camera_6124/camera_6124.c
 # target to generate assembly for a file
 source/camera/camera_6124/camera_6124.cpp.s:
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.s
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/camera/camera_6124/camera_6124.cpp.s
 .PHONY : source/camera/camera_6124/camera_6124.cpp.s
 
 source/camera/camera_uvc/camera_uvc.o: source/camera/camera_uvc/camera_uvc.cpp.o
@@ -231,6 +253,7 @@ source/camera/camera_uvc/camera_uvc.o: source/camera/camera_uvc/camera_uvc.cpp.o
 source/camera/camera_uvc/camera_uvc.cpp.o:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/camera/camera_uvc/camera_uvc.cpp.o
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/camera/camera_uvc/camera_uvc.cpp.o
 .PHONY : source/camera/camera_uvc/camera_uvc.cpp.o
 
 source/camera/camera_uvc/camera_uvc.i: source/camera/camera_uvc/camera_uvc.cpp.i
@@ -241,6 +264,7 @@ source/camera/camera_uvc/camera_uvc.i: source/camera/camera_uvc/camera_uvc.cpp.i
 source/camera/camera_uvc/camera_uvc.cpp.i:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/camera/camera_uvc/camera_uvc.cpp.i
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.i
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/camera/camera_uvc/camera_uvc.cpp.i
 .PHONY : source/camera/camera_uvc/camera_uvc.cpp.i
 
 source/camera/camera_uvc/camera_uvc.s: source/camera/camera_uvc/camera_uvc.cpp.s
@@ -251,7 +275,35 @@ source/camera/camera_uvc/camera_uvc.s: source/camera/camera_uvc/camera_uvc.cpp.s
 source/camera/camera_uvc/camera_uvc.cpp.s:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/camera/camera_uvc/camera_uvc.cpp.s
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.s
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/camera/camera_uvc/camera_uvc.cpp.s
 .PHONY : source/camera/camera_uvc/camera_uvc.cpp.s
+
+source/codec/encode/encode_6818/encode_6818.o: source/codec/encode/encode_6818/encode_6818.cpp.o
+
+.PHONY : source/codec/encode/encode_6818/encode_6818.o
+
+# target to build an object file
+source/codec/encode/encode_6818/encode_6818.cpp.o:
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/codec/encode/encode_6818/encode_6818.cpp.o
+.PHONY : source/codec/encode/encode_6818/encode_6818.cpp.o
+
+source/codec/encode/encode_6818/encode_6818.i: source/codec/encode/encode_6818/encode_6818.cpp.i
+
+.PHONY : source/codec/encode/encode_6818/encode_6818.i
+
+# target to preprocess a source file
+source/codec/encode/encode_6818/encode_6818.cpp.i:
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/codec/encode/encode_6818/encode_6818.cpp.i
+.PHONY : source/codec/encode/encode_6818/encode_6818.cpp.i
+
+source/codec/encode/encode_6818/encode_6818.s: source/codec/encode/encode_6818/encode_6818.cpp.s
+
+.PHONY : source/codec/encode/encode_6818/encode_6818.s
+
+# target to generate assembly for a file
+source/codec/encode/encode_6818/encode_6818.cpp.s:
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/codec/encode/encode_6818/encode_6818.cpp.s
+.PHONY : source/codec/encode/encode_6818/encode_6818.cpp.s
 
 source/example/vi_multichannel.o: source/example/vi_multichannel.cpp.o
 
@@ -307,6 +359,33 @@ source/example/vi_uvc_framebuffer.cpp.s:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.s
 .PHONY : source/example/vi_uvc_framebuffer.cpp.s
 
+source/example/vpss_encode.o: source/example/vpss_encode.cpp.o
+
+.PHONY : source/example/vpss_encode.o
+
+# target to build an object file
+source/example/vpss_encode.cpp.o:
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/example/vpss_encode.cpp.o
+.PHONY : source/example/vpss_encode.cpp.o
+
+source/example/vpss_encode.i: source/example/vpss_encode.cpp.i
+
+.PHONY : source/example/vpss_encode.i
+
+# target to preprocess a source file
+source/example/vpss_encode.cpp.i:
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/example/vpss_encode.cpp.i
+.PHONY : source/example/vpss_encode.cpp.i
+
+source/example/vpss_encode.s: source/example/vpss_encode.cpp.s
+
+.PHONY : source/example/vpss_encode.s
+
+# target to generate assembly for a file
+source/example/vpss_encode.cpp.s:
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/example/vpss_encode.cpp.s
+.PHONY : source/example/vpss_encode.cpp.s
+
 source/framebuffer/framebuffer.o: source/framebuffer/framebuffer.cpp.o
 
 .PHONY : source/framebuffer/framebuffer.o
@@ -315,6 +394,7 @@ source/framebuffer/framebuffer.o: source/framebuffer/framebuffer.cpp.o
 source/framebuffer/framebuffer.cpp.o:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.o
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.o
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/framebuffer/framebuffer.cpp.o
 .PHONY : source/framebuffer/framebuffer.cpp.o
 
 source/framebuffer/framebuffer.i: source/framebuffer/framebuffer.cpp.i
@@ -325,6 +405,7 @@ source/framebuffer/framebuffer.i: source/framebuffer/framebuffer.cpp.i
 source/framebuffer/framebuffer.cpp.i:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.i
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.i
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/framebuffer/framebuffer.cpp.i
 .PHONY : source/framebuffer/framebuffer.cpp.i
 
 source/framebuffer/framebuffer.s: source/framebuffer/framebuffer.cpp.s
@@ -335,6 +416,7 @@ source/framebuffer/framebuffer.s: source/framebuffer/framebuffer.cpp.s
 source/framebuffer/framebuffer.cpp.s:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.s
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.s
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/framebuffer/framebuffer.cpp.s
 .PHONY : source/framebuffer/framebuffer.cpp.s
 
 # Help Target
@@ -344,9 +426,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... vi_framebuffer"
 	@echo "... vi_multichannel"
+	@echo "... edit_cache"
+	@echo "... vpss_encode"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.o"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.i"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.s"
@@ -359,12 +442,18 @@ help:
 	@echo "... source/camera/camera_uvc/camera_uvc.o"
 	@echo "... source/camera/camera_uvc/camera_uvc.i"
 	@echo "... source/camera/camera_uvc/camera_uvc.s"
+	@echo "... source/codec/encode/encode_6818/encode_6818.o"
+	@echo "... source/codec/encode/encode_6818/encode_6818.i"
+	@echo "... source/codec/encode/encode_6818/encode_6818.s"
 	@echo "... source/example/vi_multichannel.o"
 	@echo "... source/example/vi_multichannel.i"
 	@echo "... source/example/vi_multichannel.s"
 	@echo "... source/example/vi_uvc_framebuffer.o"
 	@echo "... source/example/vi_uvc_framebuffer.i"
 	@echo "... source/example/vi_uvc_framebuffer.s"
+	@echo "... source/example/vpss_encode.o"
+	@echo "... source/example/vpss_encode.i"
+	@echo "... source/example/vpss_encode.s"
 	@echo "... source/framebuffer/framebuffer.o"
 	@echo "... source/framebuffer/framebuffer.i"
 	@echo "... source/framebuffer/framebuffer.s"

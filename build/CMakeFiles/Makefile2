@@ -55,6 +55,7 @@ CMAKE_BINARY_DIR = /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build
 # The main recursive "all" target.
 all: CMakeFiles/vi_framebuffer.dir/all
 all: CMakeFiles/vi_multichannel.dir/all
+all: CMakeFiles/vpss_encode.dir/all
 
 .PHONY : all
 
@@ -66,6 +67,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/vi_framebuffer.dir/clean
 clean: CMakeFiles/vi_multichannel.dir/clean
+clean: CMakeFiles/vpss_encode.dir/clean
 
 .PHONY : clean
 
@@ -122,6 +124,33 @@ vi_multichannel: CMakeFiles/vi_multichannel.dir/rule
 CMakeFiles/vi_multichannel.dir/clean:
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/clean
 .PHONY : CMakeFiles/vi_multichannel.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/vpss_encode.dir
+
+# All Build rule for target.
+CMakeFiles/vpss_encode.dir/all:
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/depend
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=14,15,16,17,18,19,20,21 "Built target vpss_encode"
+.PHONY : CMakeFiles/vpss_encode.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/vpss_encode.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/vpss_encode.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles 0
+.PHONY : CMakeFiles/vpss_encode.dir/rule
+
+# Convenience name for target.
+vpss_encode: CMakeFiles/vpss_encode.dir/rule
+
+.PHONY : vpss_encode
+
+# clean rule for target.
+CMakeFiles/vpss_encode.dir/clean:
+	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/clean
+.PHONY : CMakeFiles/vpss_encode.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

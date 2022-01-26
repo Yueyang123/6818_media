@@ -5,13 +5,15 @@ add_definitions(-w)
 #设置头文件目录
 include_directories (source/camera/camera_uvc)
 include_directories (source/camera)
+include_directories (source/codec/encode)
+
 include_directories (source/3rd_interface/ffmpeg)
 include_directories (source/3rd_interface/opencv)
 include_directories (source/framebuffer)
 #设置应用程序源码
 set (VI_FRAMEBUFFER_APP source/example/vi_uvc_framebuffer.cpp )
 set (VI_MUTILCHANNEL_APP source/example/vi_multichannel.cpp )
-
+set (VPSS_ENCODE_APP source/example/vpss_encode.cpp )
 #设置程序输出路径
 set (EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
@@ -44,7 +46,7 @@ if(HI3516)
     include_directories (${OPENCVDIR}/include)
 
     #添加平台摄像头文件夹
-    aux_source_directory(source/camera/camera_gc2053   PLATFROM_CAMERA)  
+    aux_source_directory(source/camera/camera_gc2053   PLATFORM_CAMERA)  
     include_directories (source/camera/camera_gc2053)
 
 
@@ -92,7 +94,7 @@ if(HI3516)
     set(CMAKE_C_COMPILER "arm-himix200-linux-gcc")
     set(CMAKE_CXX_COMPILER "arm-himix200-linux-g++")
 
-    add_executable(vi_multichannel  ${COMMON_SRC} ${PLATFROM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_MUTILCHANNEL_APP})
+    add_executable(vi_multichannel  ${COMMON_SRC} ${PLATFORM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_MUTILCHANNEL_APP})
     target_link_libraries(vi_multichannel ${OpenCV_LIBS})
     target_link_libraries(vi_multichannel ${FFmpeg_LIBS})
     target_link_libraries(vi_multichannel ${HISI_LIBS} dl)
@@ -115,8 +117,13 @@ elseif(S5P6818)
     include_directories (${OPENCVDIR}/include)
 
     #添加平台摄像头文件夹
-    aux_source_directory(source/camera/camera_6124   PLATFROM_CAMERA)  
+    aux_source_directory(source/camera/camera_6124   PLATFORM_CAMERA)  
     include_directories (source/camera/camera_6124)
+
+    #添加平台编解码器文件夹
+    aux_source_directory(source/codec/encode/encode_6818   PLATFROM_ENCODE)  
+    include_directories (source/codec/encode/encode_6818)
+
     #写入platform文件夹中nexell提供的库
     set (NXPLIBSDIR   /home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library)
     #写入内核所在位置
@@ -140,7 +147,12 @@ elseif(S5P6818)
     -L${NXPLIBSDIR}/src/libnxv4l2
     )
     
-    add_executable(vi_multichannel ${PLATFROM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_MUTILCHANNEL_APP})
+    add_executable(vpss_encode ${PLATFORM_CAMERA} ${PLATFROM_ENCODE} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VPSS_ENCODE_APP})
+    target_link_libraries(vpss_encode ${OpenCV_LIBS})
+    target_link_libraries(vpss_encode ${FFmpeg_LIBS})
+    target_link_libraries(vpss_encode ${NXP_LIBS})
+
+    add_executable(vi_multichannel ${PLATFORM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_MUTILCHANNEL_APP})
     target_link_libraries(vi_multichannel ${OpenCV_LIBS})
     target_link_libraries(vi_multichannel ${FFmpeg_LIBS})
     target_link_libraries(vi_multichannel ${NXP_LIBS} dl)

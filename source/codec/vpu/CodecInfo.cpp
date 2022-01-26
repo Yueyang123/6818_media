@@ -234,7 +234,7 @@ int codecIdToFourcc(int codec_id)
 VID_TYPE_E CodecIdToVpuType( int codecId, unsigned int fourcc )
 {
 	int vpuCodecType =-1;
-	//printf("codecId = %d, fourcc=%c%c%c%c\n", codecId, fourcc, fourcc>>8, fourcc>>16, fourcc>>24);
+	printf("codecId = %d, fourcc=%c%c%c%c\n", codecId, fourcc, fourcc>>8, fourcc>>16, fourcc>>24);
 	if( codecId == CODEC_ID_MPEG4 || codecId == CODEC_ID_FLV1 )
 	{
 		vpuCodecType = NX_MP4_DEC;

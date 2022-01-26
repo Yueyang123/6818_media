@@ -56,7 +56,7 @@ public:
         }
         else{
             finish=clock();
-            fps=1000/((double)(finish-start)/CLOCKS_PER_SEC*1000);
+            fps=(1000/((double)(finish-start)/CLOCKS_PER_SEC*1000))/2;
             return fps;
         }
     }

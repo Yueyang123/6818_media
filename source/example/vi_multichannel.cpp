@@ -4,7 +4,7 @@
  * @Autor: YURI
  * @Date: 2022-01-24 00:46:05
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-24 08:22:16
+ * @LastEditTime: 2022-01-25 06:31:22
  */
 #include <iostream>
 #include <unistd.h>
@@ -68,7 +68,7 @@ int main(int argc ,void ** argv)
     plat_capture=new camera_gc2053(cap_plat.width,cap_plat.height,V4L2_PIX_FMT_NV21,VIDEO_INDEX);
  #endif
  #ifdef S5P6818   
-    plat_capture=new camera_6124(cap_plat.width,cap_plat.height,V4L2_PIX_FMT_NV21,VIDEO_INDEX);
+    plat_capture=new camera_6124(cap_plat.width,cap_plat.height,V4L2_PIX_FMT_YUV420M,VIDEO_INDEX);
  #endif
 
     p=new framebuffer(FB_PATH);

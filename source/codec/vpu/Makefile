@@ -1,6 +1,6 @@
 ########################################################################
 # Get Linux Build Enviornment:
-include ../../../linux/platform/s5p6818/build.env
+include /home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/build.env
 
 ######################################################################
 # Build options
@@ -9,7 +9,7 @@ INCLUDE += -I$(LIBSDIR)/include -I$(LIBSDIR)/include/theoraparser
 LIBRARY	+= -L$(LIBSDIR)/lib -L$(LIBSDIR)/lib/ratecontrol 
 LIBRARY += -lnxvpu -lnxdsp -lnxvip -lnxv4l2 -lnxvmem -lnxvidrc
 LIBRARY += -ltheoraparser
-LIBRARY	+= -lavcodec -lavformat -lstdc++ -lm
+LIBRARY	+=  -L/home/swann/SDK/EXYNOS6818/SDK/ffmpeg/lib -lavformat -lavdevice -lavcodec -lavutil -lavfilter -lpostproc -lswscale -lswresample -lstdc++ -lm
 
 ######################################################################
 # Target
@@ -22,6 +22,7 @@ CPPOBJS	:= \
 	VpuDecTest.o		\
 	VpuEncTest.o		\
 	VpuJpgTest.o		\
+	vpu.o		\
 	main.o
 
 CFLAGS	+= -g

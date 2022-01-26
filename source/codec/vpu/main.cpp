@@ -65,8 +65,8 @@ int32_t main( int32_t argc, char *argv[] )
 	int32_t mode = DECODER_MODE;
 	CODEC_APP_DATA appData;
 	memset( &appData, 0, sizeof(CODEC_APP_DATA) );
-	appData.dspWidth = 1024;
-	appData.dspHeight = 600;
+	appData.dspWidth = 1920;
+	appData.dspHeight = 1080;
 
 	while( -1 != (opt=getopt(argc, argv, "m:i:o:d:hr:c:s:f:b:g:q:v:x:l:a:")))
 	{

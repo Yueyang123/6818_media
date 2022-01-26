@@ -4,12 +4,10 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/ffmpeg/include",
+                "/home/swann/SDK/EXYNOS6818/SDK/ffmpeg/include",
                 "${workspaceFolder}/source/camera",
-                "${workspaceFolder}/opencv/include",
                 "${workspaceFolder}/source/3rd_interface/ffmpeg",
                 "${workspaceFolder}/source/3rd_interface/opencv",
-                "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/framebuffer",
                 "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/kernel/arch/arm/mach-s5p6818/include/mach",
                 "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/include",
                 "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/src/libion",

@@ -15,7 +15,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -31,7 +32,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -40,15 +42,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "vi_framebuffer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-vi_framebuffer-32e1696107557383c84c.json",
+					"jsonFile" : "target-vi_framebuffer-8d54ddab673fb47aa520.json",
 					"name" : "vi_framebuffer",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "vi_multichannel::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-vi_multichannel-3407ddd62aaa2860979f.json",
+					"jsonFile" : "target-vi_multichannel-b8d6aa8ef7bc4056adf8.json",
 					"name" : "vi_multichannel",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vpss_encode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vpss_encode-0a518a1438ab13ba4d90.json",
+					"name" : "vpss_encode",
 					"projectIndex" : 0
 				}
 			]
