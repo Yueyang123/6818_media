@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+../source/audio/audio.h
+unistd.h
+-
+alsa/asoundlib.h
+-
+string
+-
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+
 /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp
 audio.h
 /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.h
@@ -22,5 +36,17 @@ stdio.h
 stdlib.h
 -
 iostream
+-
+
+/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_process.cpp
+stdio.h
+-
+stdlib.h
+-
+alsa/asoundlib.h
+-
+audio.h
+/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio.h
+string
 -
 
