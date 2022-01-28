@@ -506,6 +506,33 @@ source/audio/audio.cpp.s:
 	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio.cpp.s
 .PHONY : source/audio/audio.cpp.s
 
+source/audio/audio_wave.o: source/audio/audio_wave.cpp.o
+
+.PHONY : source/audio/audio_wave.o
+
+# target to build an object file
+source/audio/audio_wave.cpp.o:
+	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio_wave.cpp.o
+.PHONY : source/audio/audio_wave.cpp.o
+
+source/audio/audio_wave.i: source/audio/audio_wave.cpp.i
+
+.PHONY : source/audio/audio_wave.i
+
+# target to preprocess a source file
+source/audio/audio_wave.cpp.i:
+	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio_wave.cpp.i
+.PHONY : source/audio/audio_wave.cpp.i
+
+source/audio/audio_wave.s: source/audio/audio_wave.cpp.s
+
+.PHONY : source/audio/audio_wave.s
+
+# target to generate assembly for a file
+source/audio/audio_wave.cpp.s:
+	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio_wave.cpp.s
+.PHONY : source/audio/audio_wave.cpp.s
+
 source/camera/camera_gc2053/camera_gc2053.o: source/camera/camera_gc2053/camera_gc2053.cpp.o
 
 .PHONY : source/camera/camera_gc2053/camera_gc2053.o
@@ -724,6 +751,9 @@ help:
 	@echo "... source/audio/audio.o"
 	@echo "... source/audio/audio.i"
 	@echo "... source/audio/audio.s"
+	@echo "... source/audio/audio_wave.o"
+	@echo "... source/audio/audio_wave.i"
+	@echo "... source/audio/audio_wave.s"
 	@echo "... source/camera/camera_gc2053/camera_gc2053.o"
 	@echo "... source/camera/camera_gc2053/camera_gc2053.i"
 	@echo "... source/camera/camera_gc2053/camera_gc2053.s"

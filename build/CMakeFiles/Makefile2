@@ -78,7 +78,7 @@ clean: CMakeFiles/audio_process.dir/clean
 CMakeFiles/vi_framebuffer.dir/all:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/depend
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=4,5,6,7,8,9 "Built target vi_framebuffer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=5,6,7,8,9,10 "Built target vi_framebuffer"
 .PHONY : CMakeFiles/vi_framebuffer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -105,7 +105,7 @@ CMakeFiles/vi_framebuffer.dir/clean:
 CMakeFiles/vi_multichannel.dir/all:
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/depend
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target vi_multichannel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27 "Built target vi_multichannel"
 .PHONY : CMakeFiles/vi_multichannel.dir/all
 
 # Build rule for subdir invocation for target.
@@ -132,12 +132,12 @@ CMakeFiles/vi_multichannel.dir/clean:
 CMakeFiles/audio_process.dir/all:
 	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/depend
 	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=1,2,3 "Built target audio_process"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=1,2,3,4 "Built target audio_process"
 .PHONY : CMakeFiles/audio_process.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/audio_process.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/audio_process.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles 0
 .PHONY : CMakeFiles/audio_process.dir/rule

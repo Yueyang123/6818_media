@@ -104,7 +104,7 @@ if(HI3516)
 	-Wl,--end-group) 
     set(CMAKE_C_COMPILER "arm-himix200-linux-gcc")
     set(CMAKE_CXX_COMPILER "arm-himix200-linux-g++")
-#设置音频库
+    #设置音频库
     if (ALSA)   
         set(ALSADIR /home/swann/SDK/HI3516/SDK/alsa-lib)
         list(APPEND ALSA_LIBS   asound )

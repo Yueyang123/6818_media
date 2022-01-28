@@ -3,7 +3,7 @@
  * @Autor: YURI
  * @Date: 2022-01-26 18:08:08
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-27 18:48:12
+ * @LastEditTime: 2022-01-27 23:56:34
 */
 #ifndef AUDIO_H
 #define AUDIO_H
@@ -33,7 +33,7 @@ private:
 
 public:
 	int frame_size;
-    audio(string audio_tag="default",int channel=2,int sample_rate=48000,snd_pcm_format_t pcm_format=SND_PCM_FORMAT_S16_LE);
+    audio(string audio_tag="default",int channel=2,int sample_rate=48000,snd_pcm_format_t pcm_format=SND_PCM_FORMAT_S16_LE,int frame_size=FRAME_INIT);
     ~audio();
     void audio_open_micophone(void);
     unsigned char* audio_read_frame();//从麦克风读一帧出来

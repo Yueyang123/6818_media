@@ -127,14 +127,14 @@ void audio::audio_channel_split(unsigned char ** data)
  * @return {*}
  * @author: YURI
  */
-audio::audio(string audio_tag,int channel,int sample_rate,snd_pcm_format_t pcm_format)
+audio::audio(string audio_tag,int channel,int sample_rate,snd_pcm_format_t pcm_format,int frame_size)
 {
     //设置采集参数
     this->audio_path=audio_tag;
     this->channel=channel;
     this->sample_rate=sample_rate;
     this->format=pcm_format;
-    this->frame_size=FRAME_INIT;
+    this->frame_size=frame_size;
 }
 /**
  * @description: 释放空间关闭硬件

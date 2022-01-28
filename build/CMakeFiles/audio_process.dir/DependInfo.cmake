@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/audio_process.dir/source/audio/audio.cpp.o"
+  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio_wave.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/audio_process.dir/source/audio/audio_wave.cpp.o"
   "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_process.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/audio_process.dir/source/example/audio_process.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
