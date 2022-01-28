@@ -5,6 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/home/swann/SDK/EXYNOS6818/SDK/ffmpeg/include",
+                "/home/swann/SDK/EXYNOS6818/SDK/opencv/include",
                 "/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include",
                 "${workspaceFolder}/source/camera",
                 "${workspaceFolder}/source/audio",

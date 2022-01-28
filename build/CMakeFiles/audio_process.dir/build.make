@@ -60,28 +60,28 @@ include CMakeFiles/audio_process.dir/flags.make
 CMakeFiles/audio_process.dir/source/audio/audio.cpp.o: CMakeFiles/audio_process.dir/flags.make
 CMakeFiles/audio_process.dir/source/audio/audio.cpp.o: ../source/audio/audio.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/audio_process.dir/source/audio/audio.cpp.o"
-	arm-cortex_a9-linux-gnueabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/audio_process.dir/source/audio/audio.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp
+	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/audio_process.dir/source/audio/audio.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp
 
 CMakeFiles/audio_process.dir/source/audio/audio.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/audio_process.dir/source/audio/audio.cpp.i"
-	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp > CMakeFiles/audio_process.dir/source/audio/audio.cpp.i
+	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp > CMakeFiles/audio_process.dir/source/audio/audio.cpp.i
 
 CMakeFiles/audio_process.dir/source/audio/audio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/audio_process.dir/source/audio/audio.cpp.s"
-	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp -o CMakeFiles/audio_process.dir/source/audio/audio.cpp.s
+	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp -o CMakeFiles/audio_process.dir/source/audio/audio.cpp.s
 
 CMakeFiles/audio_process.dir/source/example/audio_process.cpp.o: CMakeFiles/audio_process.dir/flags.make
 CMakeFiles/audio_process.dir/source/example/audio_process.cpp.o: ../source/example/audio_process.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/audio_process.dir/source/example/audio_process.cpp.o"
-	arm-cortex_a9-linux-gnueabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/audio_process.dir/source/example/audio_process.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_process.cpp
+	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/audio_process.dir/source/example/audio_process.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_process.cpp
 
 CMakeFiles/audio_process.dir/source/example/audio_process.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/audio_process.dir/source/example/audio_process.cpp.i"
-	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_process.cpp > CMakeFiles/audio_process.dir/source/example/audio_process.cpp.i
+	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_process.cpp > CMakeFiles/audio_process.dir/source/example/audio_process.cpp.i
 
 CMakeFiles/audio_process.dir/source/example/audio_process.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/audio_process.dir/source/example/audio_process.cpp.s"
-	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_process.cpp -o CMakeFiles/audio_process.dir/source/example/audio_process.cpp.s
+	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_process.cpp -o CMakeFiles/audio_process.dir/source/example/audio_process.cpp.s
 
 # Object files for target audio_process
 audio_process_OBJECTS = \

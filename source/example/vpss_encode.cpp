@@ -4,7 +4,7 @@
  * @Autor: YURI
  * @Date: 2022-01-25 19:06:08
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-25 23:42:08
+ * @LastEditTime: 2022-01-27 22:40:33
  */
 #include "encode.h"
 #include "encode_6818/encode_6818.h"
@@ -13,14 +13,14 @@
 #include "framebuffer.h"
 #include "camera.h"
 #include "camera_uvc/camera_uvc.h"
-#include "camera_gc2053/camera_gc2053.h"
-#include "camera_6124/camera_6124.h"
+
 #ifdef S5P6818
+    #include "camera_6124/camera_6124.h"
     #define VIDEO_INDEX 6  
 #else
+    #include "camera_gc2053/camera_gc2053.h"
     #define VIDEO_INDEX 0 
 #endif
-
 
 using namespace std;
 using namespace cv;

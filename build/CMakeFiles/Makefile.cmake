@@ -47,6 +47,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/vi_framebuffer.dir/DependInfo.cmake"
   "CMakeFiles/vi_multichannel.dir/DependInfo.cmake"
-  "CMakeFiles/vpss_encode.dir/DependInfo.cmake"
   "CMakeFiles/audio_process.dir/DependInfo.cmake"
   )

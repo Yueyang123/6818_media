@@ -1,6 +1,5 @@
 /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/rebuild_cache.dir
+/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/edit_cache.dir
 /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_framebuffer.dir
 /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_multichannel.dir
-/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/edit_cache.dir
-/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vpss_encode.dir
 /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/audio_process.dir

@@ -4,7 +4,7 @@
  * @Autor: YURI
  * @Date: 2022-01-24 00:46:05
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-25 06:31:22
+ * @LastEditTime: 2022-01-27 22:40:07
  */
 #include <iostream>
 #include <unistd.h>
@@ -17,11 +17,12 @@
 #include <string.h>
 #include "camera.h"
 #include "camera_uvc/camera_uvc.h"
-#include "camera_gc2053/camera_gc2053.h"
-#include "camera_6124/camera_6124.h"
+
 #ifdef S5P6818
+    #include "camera_6124/camera_6124.h"
     #define VIDEO_INDEX 6  
 #else
+    #include "camera_gc2053/camera_gc2053.h"
     #define VIDEO_INDEX 0 
 #endif
 #define FB_PATH     "/dev/fb0"
