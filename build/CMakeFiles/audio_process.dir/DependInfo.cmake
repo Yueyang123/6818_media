@@ -4,11 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o"
-  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/opencv/opencv_mat.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_framebuffer.dir/source/3rd_interface/opencv/opencv_mat.cpp.o"
-  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_uvc/camera_uvc.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_framebuffer.dir/source/camera/camera_uvc/camera_uvc.cpp.o"
-  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/vi_uvc_framebuffer.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_framebuffer.dir/source/example/vi_uvc_framebuffer.cpp.o"
-  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/framebuffer/framebuffer.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.o"
+  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/audio_process.dir/source/audio/audio.cpp.o"
+  "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_process.cpp" "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/audio_process.dir/source/example/audio_process.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

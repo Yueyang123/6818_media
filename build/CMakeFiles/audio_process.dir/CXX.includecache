@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp
+audio.h
+/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.h
+
+/home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.h
+unistd.h
+-
+alsa/asoundlib.h
+-
+string
+-
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+

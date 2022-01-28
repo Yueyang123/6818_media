@@ -16,6 +16,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
+  "ALSA"
   "S5P6818"
   )
 
@@ -27,6 +28,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../source/3rd_interface/ffmpeg"
   "../source/3rd_interface/opencv"
   "../source/framebuffer"
+  "../source/audio"
   "/home/swann/SDK/EXYNOS6818/SDK/ffmpeg/include"
   "/home/swann/SDK/EXYNOS6818/SDK/opencv/install/include"
   "../source/camera/camera_6124"
@@ -37,6 +39,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/src/libnxv4l2"
   "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/include/theoraparser"
   "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/include"
+  "/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/lib/include"
   )
 
 # Targets to which this target links.

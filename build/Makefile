@@ -149,6 +149,19 @@ vpss_encode/fast:
 	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/build
 .PHONY : vpss_encode/fast
 
+#=============================================================================
+# Target rules for targets named audio_process
+
+# Build rule for target.
+audio_process: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_process
+.PHONY : audio_process
+
+# fast build rule for target.
+audio_process/fast:
+	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/build
+.PHONY : audio_process/fast
+
 source/3rd_interface/ffmpeg/ffmpeg_sws.o: source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
 
 .PHONY : source/3rd_interface/ffmpeg/ffmpeg_sws.o
@@ -214,6 +227,33 @@ source/3rd_interface/opencv/opencv_mat.cpp.s:
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
 	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
 .PHONY : source/3rd_interface/opencv/opencv_mat.cpp.s
+
+source/audio/audio.o: source/audio/audio.cpp.o
+
+.PHONY : source/audio/audio.o
+
+# target to build an object file
+source/audio/audio.cpp.o:
+	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio.cpp.o
+.PHONY : source/audio/audio.cpp.o
+
+source/audio/audio.i: source/audio/audio.cpp.i
+
+.PHONY : source/audio/audio.i
+
+# target to preprocess a source file
+source/audio/audio.cpp.i:
+	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio.cpp.i
+.PHONY : source/audio/audio.cpp.i
+
+source/audio/audio.s: source/audio/audio.cpp.s
+
+.PHONY : source/audio/audio.s
+
+# target to generate assembly for a file
+source/audio/audio.cpp.s:
+	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio.cpp.s
+.PHONY : source/audio/audio.cpp.s
 
 source/camera/camera_6124/camera_6124.o: source/camera/camera_6124/camera_6124.cpp.o
 
@@ -304,6 +344,33 @@ source/codec/encode/encode_6818/encode_6818.s: source/codec/encode/encode_6818/e
 source/codec/encode/encode_6818/encode_6818.cpp.s:
 	$(MAKE) -f CMakeFiles/vpss_encode.dir/build.make CMakeFiles/vpss_encode.dir/source/codec/encode/encode_6818/encode_6818.cpp.s
 .PHONY : source/codec/encode/encode_6818/encode_6818.cpp.s
+
+source/example/audio_process.o: source/example/audio_process.cpp.o
+
+.PHONY : source/example/audio_process.o
+
+# target to build an object file
+source/example/audio_process.cpp.o:
+	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/example/audio_process.cpp.o
+.PHONY : source/example/audio_process.cpp.o
+
+source/example/audio_process.i: source/example/audio_process.cpp.i
+
+.PHONY : source/example/audio_process.i
+
+# target to preprocess a source file
+source/example/audio_process.cpp.i:
+	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/example/audio_process.cpp.i
+.PHONY : source/example/audio_process.cpp.i
+
+source/example/audio_process.s: source/example/audio_process.cpp.s
+
+.PHONY : source/example/audio_process.s
+
+# target to generate assembly for a file
+source/example/audio_process.cpp.s:
+	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/example/audio_process.cpp.s
+.PHONY : source/example/audio_process.cpp.s
 
 source/example/vi_multichannel.o: source/example/vi_multichannel.cpp.o
 
@@ -430,12 +497,16 @@ help:
 	@echo "... vi_multichannel"
 	@echo "... edit_cache"
 	@echo "... vpss_encode"
+	@echo "... audio_process"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.o"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.i"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.s"
 	@echo "... source/3rd_interface/opencv/opencv_mat.o"
 	@echo "... source/3rd_interface/opencv/opencv_mat.i"
 	@echo "... source/3rd_interface/opencv/opencv_mat.s"
+	@echo "... source/audio/audio.o"
+	@echo "... source/audio/audio.i"
+	@echo "... source/audio/audio.s"
 	@echo "... source/camera/camera_6124/camera_6124.o"
 	@echo "... source/camera/camera_6124/camera_6124.i"
 	@echo "... source/camera/camera_6124/camera_6124.s"
@@ -445,6 +516,9 @@ help:
 	@echo "... source/codec/encode/encode_6818/encode_6818.o"
 	@echo "... source/codec/encode/encode_6818/encode_6818.i"
 	@echo "... source/codec/encode/encode_6818/encode_6818.s"
+	@echo "... source/example/audio_process.o"
+	@echo "... source/example/audio_process.i"
+	@echo "... source/example/audio_process.s"
 	@echo "... source/example/vi_multichannel.o"
 	@echo "... source/example/vi_multichannel.i"
 	@echo "... source/example/vi_multichannel.s"

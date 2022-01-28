@@ -5,7 +5,9 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/home/swann/SDK/EXYNOS6818/SDK/ffmpeg/include",
+                "/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include",
                 "${workspaceFolder}/source/camera",
+                "${workspaceFolder}/source/audio",
                 "${workspaceFolder}/source/3rd_interface/ffmpeg",
                 "${workspaceFolder}/source/3rd_interface/opencv",
                 "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/kernel/arch/arm/mach-s5p6818/include/mach",

@@ -14,6 +14,7 @@ include_directories (source/framebuffer)
 set (VI_FRAMEBUFFER_APP source/example/vi_uvc_framebuffer.cpp )
 set (VI_MUTILCHANNEL_APP source/example/vi_multichannel.cpp )
 set (VPSS_ENCODE_APP source/example/vpss_encode.cpp )
+set (AUDIO_APP source/example/audio_process.cpp )
 #设置程序输出路径
 set (EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
@@ -24,6 +25,14 @@ aux_source_directory(source/3rd_interface/ffmpeg BASE4_SRC)
 
 option(HI3516 "USE HI3516 LIB" OFF)
 option(S5P6818 "USE S5P6818 LIB" ON)
+#是否开启音频
+option(ALSA "USE ALSA LIB" ON)
+if (ALSA)
+    MESSAGE(USE_ALSA_LIB)
+    include_directories (source/audio)
+    aux_source_directory(source/audio AUDIO_SRC)
+    add_definitions(-DALSA)
+endif()
 if (HI3516)
     add_definitions(-DHI3516)
 endif()
@@ -42,6 +51,8 @@ if(HI3516)
     add_link_options(-L${FFMPEGDIR}/lib -lpthread)
     list(APPEND OpenCV_LIBS     opencv_imgproc opencv_core )
     add_link_options(-L${OPENCVDIR}/lib)
+
+
     include_directories (${FFMPEGDIR}/include)
     include_directories (${OPENCVDIR}/include)
 
@@ -93,7 +104,13 @@ if(HI3516)
 	-Wl,--end-group) 
     set(CMAKE_C_COMPILER "arm-himix200-linux-gcc")
     set(CMAKE_CXX_COMPILER "arm-himix200-linux-g++")
-
+#设置音频库
+    if (ALSA)   
+    set(ALSADIR /home/swann/SDK/HI3516/SDK/alsa-lib/lib)
+    list(APPEND ALSA_LIBS   asound )
+    add_link_options(-L${ALSADIR}/lib)
+    include_directories (${ALSADIR}/include)
+endif()
     add_executable(vi_multichannel  ${COMMON_SRC} ${PLATFORM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_MUTILCHANNEL_APP})
     target_link_libraries(vi_multichannel ${OpenCV_LIBS})
     target_link_libraries(vi_multichannel ${FFmpeg_LIBS})
@@ -146,7 +163,16 @@ elseif(S5P6818)
     -L${NXPLIBSDIR}/src/libion
     -L${NXPLIBSDIR}/src/libnxv4l2
     )
-    
+
+if (ALSA)   
+    set(ALSADIR /home/swann/SDK/EXYNOS6818/SDK/alsa-lib/lib)
+    list(APPEND ALSA_LIBS   asound )
+    add_link_options(-L${ALSADIR}/lib)
+    include_directories (${ALSADIR}/include)
+    add_executable(audio_process  ${AUDIO_SRC} ${AUDIO_APP})
+    target_link_libraries(audio_process ${ALSA_LIBS})
+endif()
+
     add_executable(vpss_encode ${PLATFORM_CAMERA} ${PLATFROM_ENCODE} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VPSS_ENCODE_APP})
     target_link_libraries(vpss_encode ${OpenCV_LIBS})
     target_link_libraries(vpss_encode ${FFmpeg_LIBS})
