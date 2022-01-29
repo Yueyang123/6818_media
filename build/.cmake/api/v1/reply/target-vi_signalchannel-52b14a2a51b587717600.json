@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/bin/audio_process"
+			"path" : "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/bin/vi_signalchannel"
 		}
 	],
 	"backtrace" : 1,
@@ -28,49 +28,49 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 113,
+				"line" : 101,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 51,
+				"line" : 52,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 53,
+				"line" : 54,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 77,
+				"line" : 78,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 111,
+				"line" : 95,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 80,
+				"line" : 81,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 34,
+				"line" : 35,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 37,
+				"line" : 38,
 				"parent" : 0
 			},
 			{
@@ -112,13 +112,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 32,
-				"parent" : 0
-			},
-			{
-				"command" : 4,
-				"file" : 0,
-				"line" : 56,
+				"line" : 33,
 				"parent" : 0
 			},
 			{
@@ -130,13 +124,13 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 61,
+				"line" : 58,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 68,
+				"line" : 62,
 				"parent" : 0
 			},
 			{
@@ -160,7 +154,13 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 112,
+				"line" : 72,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 96,
 				"parent" : 0
 			}
 		]
@@ -288,130 +288,6 @@
 				{
 					"backtrace" : 6,
 					"fragment" : "-DHI_ACODEC_TYPE_HDMI"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "-Wl,--start-group"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libmpi.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libhdmi.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hiae.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libisp.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hidehaze.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hidrc.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hildci.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hicalcflicker.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/lib_hiawb.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_gc2053.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libVoiceEngine.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libupvqe.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libdnvqe.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsecurec.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx327.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx327_2l.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx307.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx307_2l.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx458.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_mn34220.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_os05a.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_os08a10.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_sc4210.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_ov12870.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_os04b10.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx415.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx219.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx274.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "/home/swann/SDK/HI3516/MYMMP/mpp/lib/libsns_imx335.a"
-				},
-				{
-					"backtrace" : 6,
-					"fragment" : "-Wl,--end-group"
 				}
 			],
 			"defines" : 
@@ -493,11 +369,14 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3,
+				4,
+				5
 			]
 		}
 	],
-	"id" : "audio_process::@6890427a1f51a3e7e1df",
+	"id" : "vi_signalchannel::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -532,14 +411,174 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-lasound",
+				"fragment" : "-lopencv_imgproc",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lopencv_core",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavformat",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavdevice",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavcodec",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavutil",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavfilter",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpostproc",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lswscale",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lswresample",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lisp",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lmpi",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lhdmi",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_gc2053",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldnvqe",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lVoiceEngine",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lupvqe",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsecurec",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsecurec",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_imx327",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_imx327_2l",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_imx307",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_imx307_2l",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_imx458",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_mn34220",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_os05a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_os08a10",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_sc4210",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_ov12870",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_os04b10",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_imx415",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_imx219",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_imx274",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsns_imx335",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-l_hiae",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-l_hidehaze",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-l_hildci",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-l_hiawb",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-l_hidrc",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-l_hicalcflicker",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "audio_process",
-	"nameOnDisk" : "audio_process",
+	"name" : "vi_signalchannel",
+	"nameOnDisk" : "vi_signalchannel",
 	"paths" : 
 	{
 		"build" : ".",
@@ -553,7 +592,10 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3,
+				4,
+				5
 			]
 		}
 	],
@@ -562,19 +604,37 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "source/audio/audio.cpp",
+			"path" : "source/camera/camera_gc2053/camera_gc2053.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "source/audio/audio_wave.cpp",
+			"path" : "source/camera/camera_uvc/camera_uvc.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "source/example/audio_process.cpp",
+			"path" : "source/framebuffer/framebuffer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/3rd_interface/opencv/opencv_mat.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/3rd_interface/ffmpeg/ffmpeg_sws.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/example/vi_signalchannel.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

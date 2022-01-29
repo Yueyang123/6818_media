@@ -13,6 +13,7 @@ include_directories (source/framebuffer)
 #设置应用程序源码
 set (VI_FRAMEBUFFER_APP source/example/vi_uvc_framebuffer.cpp )
 set (VI_MUTILCHANNEL_APP source/example/vi_multichannel.cpp )
+set (VI_SIGNALCHANNEL_APP source/example/vi_signalchannel.cpp )
 set (VPSS_ENCODE_APP source/example/vpss_encode.cpp )
 set (AUDIO_APP source/example/audio_process.cpp )
 #设置程序输出路径
@@ -84,24 +85,7 @@ if(HI3516)
     -DVER_X=1 -DVER_Y=0 -DVER_Z=0 -DVER_P=0 -DVER_B=10 -DUSER_BIT_32 -DKERNEL_BIT_32 -Wno-date-time	
     -DSENSOR0_TYPE=GALAXYCORE_GC2053_MIPI_2M_30FPS_10BIT 
     -DSENSOR1_TYPE=GALAXYCORE_GC2053_MIPI_2M_30FPS_10BIT	
-    -DHI_ACODEC_TYPE_INNER -DHI_ACODEC_TYPE_HDMI 
-    -Wl,--start-group 	
-	${HISILIB}/libmpi.a		 	${HISILIB}/libhdmi.a 
-	${HISILIB}/lib_hiae.a 	 	${HISILIB}/libisp.a 
-	${HISILIB}/lib_hidehaze.a 	${HISILIB}/lib_hidrc.a 
-	${HISILIB}/lib_hildci.a 	${HISILIB}/lib_hicalcflicker.a 
-	${HISILIB}/lib_hiawb.a 	 	${HISILIB}/libsns_gc2053.a  
-	${HISILIB}/libVoiceEngine.a ${HISILIB}/libupvqe.a 
-	${HISILIB}/libdnvqe.a		${HISILIB}/libsecurec.a 
-	${HISILIB}/libsns_imx327.a  ${HISILIB}/libsns_imx327_2l.a 
-	${HISILIB}/libsns_imx307.a  ${HISILIB}/libsns_imx307_2l.a 
-	${HISILIB}/libsns_imx458.a  ${HISILIB}/libsns_mn34220.a 
-	${HISILIB}/libsns_os05a.a   ${HISILIB}/libsns_os08a10.a 
-	${HISILIB}/libsns_sc4210.a  ${HISILIB}/libsns_ov12870.a 
-	${HISILIB}/libsns_os04b10.a ${HISILIB}/libsns_imx415.a 
-	${HISILIB}/libsns_imx219.a  ${HISILIB}/libsns_imx274.a 
-	${HISILIB}/libsns_imx335.a 
-	-Wl,--end-group) 
+    -DHI_ACODEC_TYPE_INNER -DHI_ACODEC_TYPE_HDMI ) 
     set(CMAKE_C_COMPILER "arm-himix200-linux-gcc")
     set(CMAKE_CXX_COMPILER "arm-himix200-linux-g++")
     #设置音频库
@@ -113,7 +97,13 @@ if(HI3516)
         add_executable(audio_process  ${AUDIO_SRC} ${AUDIO_APP})
         target_link_libraries(audio_process ${ALSA_LIBS})
     endif()
-    add_executable(vi_multichannel  ${COMMON_SRC} ${PLATFORM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_MUTILCHANNEL_APP})
+
+    add_executable(vi_signalchannel   ${PLATFORM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_SIGNALCHANNEL_APP})
+    target_link_libraries(vi_signalchannel ${OpenCV_LIBS})
+    target_link_libraries(vi_signalchannel ${FFmpeg_LIBS})
+    target_link_libraries(vi_signalchannel ${HISI_LIBS} dl)
+
+    add_executable(vi_multichannel   ${PLATFORM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_MUTILCHANNEL_APP})
     target_link_libraries(vi_multichannel ${OpenCV_LIBS})
     target_link_libraries(vi_multichannel ${FFmpeg_LIBS})
     target_link_libraries(vi_multichannel ${HISI_LIBS} dl)
