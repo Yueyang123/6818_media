@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named amg8833
+
+# Build rule for target.
+amg8833: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 amg8833
+.PHONY : amg8833
+
+# fast build rule for target.
+amg8833/fast:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/build
+.PHONY : amg8833/fast
 
 #=============================================================================
 # Target rules for targets named vi_framebuffer
@@ -168,6 +181,7 @@ source/3rd_interface/ffmpeg/ffmpeg_sws.o: source/3rd_interface/ffmpeg/ffmpeg_sws
 
 # target to build an object file
 source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
@@ -179,6 +193,7 @@ source/3rd_interface/ffmpeg/ffmpeg_sws.i: source/3rd_interface/ffmpeg/ffmpeg_sws
 
 # target to preprocess a source file
 source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i
@@ -190,6 +205,7 @@ source/3rd_interface/ffmpeg/ffmpeg_sws.s: source/3rd_interface/ffmpeg/ffmpeg_sws
 
 # target to generate assembly for a file
 source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
@@ -201,6 +217,7 @@ source/3rd_interface/opencv/opencv_mat.o: source/3rd_interface/opencv/opencv_mat
 
 # target to build an object file
 source/3rd_interface/opencv/opencv_mat.cpp.o:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/3rd_interface/opencv/opencv_mat.cpp.o
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/opencv/opencv_mat.cpp.o
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o
@@ -212,6 +229,7 @@ source/3rd_interface/opencv/opencv_mat.i: source/3rd_interface/opencv/opencv_mat
 
 # target to preprocess a source file
 source/3rd_interface/opencv/opencv_mat.cpp.i:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/3rd_interface/opencv/opencv_mat.cpp.i
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/opencv/opencv_mat.cpp.i
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.i
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.i
@@ -223,6 +241,7 @@ source/3rd_interface/opencv/opencv_mat.s: source/3rd_interface/opencv/opencv_mat
 
 # target to generate assembly for a file
 source/3rd_interface/opencv/opencv_mat.cpp.s:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
@@ -288,6 +307,7 @@ source/camera/camera_gc2053/camera_gc2053.o: source/camera/camera_gc2053/camera_
 
 # target to build an object file
 source/camera/camera_gc2053/camera_gc2053.cpp.o:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/camera/camera_gc2053/camera_gc2053.cpp.o
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.o
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.o
 .PHONY : source/camera/camera_gc2053/camera_gc2053.cpp.o
@@ -298,6 +318,7 @@ source/camera/camera_gc2053/camera_gc2053.i: source/camera/camera_gc2053/camera_
 
 # target to preprocess a source file
 source/camera/camera_gc2053/camera_gc2053.cpp.i:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/camera/camera_gc2053/camera_gc2053.cpp.i
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.i
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.i
 .PHONY : source/camera/camera_gc2053/camera_gc2053.cpp.i
@@ -308,6 +329,7 @@ source/camera/camera_gc2053/camera_gc2053.s: source/camera/camera_gc2053/camera_
 
 # target to generate assembly for a file
 source/camera/camera_gc2053/camera_gc2053.cpp.s:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/camera/camera_gc2053/camera_gc2053.cpp.s
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.s
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.s
 .PHONY : source/camera/camera_gc2053/camera_gc2053.cpp.s
@@ -318,6 +340,7 @@ source/camera/camera_uvc/camera_uvc.o: source/camera/camera_uvc/camera_uvc.cpp.o
 
 # target to build an object file
 source/camera/camera_uvc/camera_uvc.cpp.o:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/camera/camera_uvc/camera_uvc.cpp.o
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/camera/camera_uvc/camera_uvc.cpp.o
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o
@@ -329,6 +352,7 @@ source/camera/camera_uvc/camera_uvc.i: source/camera/camera_uvc/camera_uvc.cpp.i
 
 # target to preprocess a source file
 source/camera/camera_uvc/camera_uvc.cpp.i:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/camera/camera_uvc/camera_uvc.cpp.i
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/camera/camera_uvc/camera_uvc.cpp.i
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.i
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/camera/camera_uvc/camera_uvc.cpp.i
@@ -340,10 +364,38 @@ source/camera/camera_uvc/camera_uvc.s: source/camera/camera_uvc/camera_uvc.cpp.s
 
 # target to generate assembly for a file
 source/camera/camera_uvc/camera_uvc.cpp.s:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/camera/camera_uvc/camera_uvc.cpp.s
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/camera/camera_uvc/camera_uvc.cpp.s
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.s
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/camera/camera_uvc/camera_uvc.cpp.s
 .PHONY : source/camera/camera_uvc/camera_uvc.cpp.s
+
+source/example/amg8833.o: source/example/amg8833.cpp.o
+
+.PHONY : source/example/amg8833.o
+
+# target to build an object file
+source/example/amg8833.cpp.o:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/example/amg8833.cpp.o
+.PHONY : source/example/amg8833.cpp.o
+
+source/example/amg8833.i: source/example/amg8833.cpp.i
+
+.PHONY : source/example/amg8833.i
+
+# target to preprocess a source file
+source/example/amg8833.cpp.i:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/example/amg8833.cpp.i
+.PHONY : source/example/amg8833.cpp.i
+
+source/example/amg8833.s: source/example/amg8833.cpp.s
+
+.PHONY : source/example/amg8833.s
+
+# target to generate assembly for a file
+source/example/amg8833.cpp.s:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/example/amg8833.cpp.s
+.PHONY : source/example/amg8833.cpp.s
 
 source/example/audio_process.o: source/example/audio_process.cpp.o
 
@@ -459,6 +511,7 @@ source/framebuffer/framebuffer.o: source/framebuffer/framebuffer.cpp.o
 
 # target to build an object file
 source/framebuffer/framebuffer.cpp.o:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/framebuffer/framebuffer.cpp.o
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.o
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.o
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/framebuffer/framebuffer.cpp.o
@@ -470,6 +523,7 @@ source/framebuffer/framebuffer.i: source/framebuffer/framebuffer.cpp.i
 
 # target to preprocess a source file
 source/framebuffer/framebuffer.cpp.i:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/framebuffer/framebuffer.cpp.i
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.i
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.i
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/framebuffer/framebuffer.cpp.i
@@ -481,6 +535,7 @@ source/framebuffer/framebuffer.s: source/framebuffer/framebuffer.cpp.s
 
 # target to generate assembly for a file
 source/framebuffer/framebuffer.cpp.s:
+	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/framebuffer/framebuffer.cpp.s
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/source/framebuffer/framebuffer.cpp.s
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.s
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/source/framebuffer/framebuffer.cpp.s
@@ -492,8 +547,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... amg8833"
 	@echo "... vi_framebuffer"
 	@echo "... vi_multichannel"
 	@echo "... vi_signalchannel"
@@ -516,6 +572,9 @@ help:
 	@echo "... source/camera/camera_uvc/camera_uvc.o"
 	@echo "... source/camera/camera_uvc/camera_uvc.i"
 	@echo "... source/camera/camera_uvc/camera_uvc.s"
+	@echo "... source/example/amg8833.o"
+	@echo "... source/example/amg8833.i"
+	@echo "... source/example/amg8833.s"
 	@echo "... source/example/audio_process.o"
 	@echo "... source/example/audio_process.i"
 	@echo "... source/example/audio_process.s"

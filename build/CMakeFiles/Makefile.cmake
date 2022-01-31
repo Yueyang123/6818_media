@@ -45,6 +45,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/amg8833.dir/DependInfo.cmake"
   "CMakeFiles/vi_framebuffer.dir/DependInfo.cmake"
   "CMakeFiles/vi_multichannel.dir/DependInfo.cmake"
   "CMakeFiles/vi_signalchannel.dir/DependInfo.cmake"

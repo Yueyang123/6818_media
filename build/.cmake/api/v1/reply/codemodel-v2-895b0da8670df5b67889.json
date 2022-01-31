@@ -17,7 +17,8 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				}
 			],
@@ -35,12 +36,20 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 0,
+					"id" : "amg8833::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-amg8833-4f538c921c5c4ba20d3a.json",
+					"name" : "amg8833",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 0,
 					"id" : "audio_process::@6890427a1f51a3e7e1df",
