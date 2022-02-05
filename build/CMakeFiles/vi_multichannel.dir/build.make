@@ -57,87 +57,87 @@ include CMakeFiles/vi_multichannel.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/vi_multichannel.dir/flags.make
 
-CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.o: CMakeFiles/vi_multichannel.dir/flags.make
-CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.o: ../source/camera/camera_gc2053/camera_gc2053.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.o"
-	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_gc2053/camera_gc2053.cpp
+CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.o: CMakeFiles/vi_multichannel.dir/flags.make
+CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.o: ../source/camera/camera_6124/camera_6124.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.o"
+	arm-cortex_a9-linux-gnueabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_6124/camera_6124.cpp
 
-CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.i"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_gc2053/camera_gc2053.cpp > CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.i
+CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.i"
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_6124/camera_6124.cpp > CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.i
 
-CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.s"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_gc2053/camera_gc2053.cpp -o CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.s
+CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.s"
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_6124/camera_6124.cpp -o CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.s
 
 CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o: CMakeFiles/vi_multichannel.dir/flags.make
 CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o: ../source/camera/camera_uvc/camera_uvc.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o"
-	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_uvc/camera_uvc.cpp
+	arm-cortex_a9-linux-gnueabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_uvc/camera_uvc.cpp
 
 CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.i"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_uvc/camera_uvc.cpp > CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.i
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_uvc/camera_uvc.cpp > CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.i
 
 CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.s"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_uvc/camera_uvc.cpp -o CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.s
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/camera/camera_uvc/camera_uvc.cpp -o CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.s
 
 CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.o: CMakeFiles/vi_multichannel.dir/flags.make
 CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.o: ../source/framebuffer/framebuffer.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.o"
-	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/framebuffer/framebuffer.cpp
+	arm-cortex_a9-linux-gnueabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/framebuffer/framebuffer.cpp
 
 CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.i"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/framebuffer/framebuffer.cpp > CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.i
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/framebuffer/framebuffer.cpp > CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.i
 
 CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.s"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/framebuffer/framebuffer.cpp -o CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.s
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/framebuffer/framebuffer.cpp -o CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.s
 
 CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o: CMakeFiles/vi_multichannel.dir/flags.make
 CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o: ../source/3rd_interface/opencv/opencv_mat.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o"
-	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/opencv/opencv_mat.cpp
+	arm-cortex_a9-linux-gnueabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/opencv/opencv_mat.cpp
 
 CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.i"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/opencv/opencv_mat.cpp > CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.i
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/opencv/opencv_mat.cpp > CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.i
 
 CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.s"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/opencv/opencv_mat.cpp -o CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/opencv/opencv_mat.cpp -o CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.s
 
 CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o: CMakeFiles/vi_multichannel.dir/flags.make
 CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o: ../source/3rd_interface/ffmpeg/ffmpeg_sws.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o"
-	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp
+	arm-cortex_a9-linux-gnueabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp
 
 CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp > CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp > CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.i
 
 CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp -o CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp -o CMakeFiles/vi_multichannel.dir/source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.s
 
 CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.o: CMakeFiles/vi_multichannel.dir/flags.make
 CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.o: ../source/example/vi_multichannel.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.o"
-	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/vi_multichannel.cpp
+	arm-cortex_a9-linux-gnueabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/vi_multichannel.cpp
 
 CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.i"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/vi_multichannel.cpp > CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.i
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/vi_multichannel.cpp > CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.i
 
 CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.s"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/vi_multichannel.cpp -o CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.s
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/vi_multichannel.cpp -o CMakeFiles/vi_multichannel.dir/source/example/vi_multichannel.cpp.s
 
 # Object files for target vi_multichannel
 vi_multichannel_OBJECTS = \
-"CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.o" \
+"CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.o" \
 "CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o" \
 "CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.o" \
 "CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o" \
@@ -147,7 +147,7 @@ vi_multichannel_OBJECTS = \
 # External object files for target vi_multichannel
 vi_multichannel_EXTERNAL_OBJECTS =
 
-../bin/vi_multichannel: CMakeFiles/vi_multichannel.dir/source/camera/camera_gc2053/camera_gc2053.cpp.o
+../bin/vi_multichannel: CMakeFiles/vi_multichannel.dir/source/camera/camera_6124/camera_6124.cpp.o
 ../bin/vi_multichannel: CMakeFiles/vi_multichannel.dir/source/camera/camera_uvc/camera_uvc.cpp.o
 ../bin/vi_multichannel: CMakeFiles/vi_multichannel.dir/source/framebuffer/framebuffer.cpp.o
 ../bin/vi_multichannel: CMakeFiles/vi_multichannel.dir/source/3rd_interface/opencv/opencv_mat.cpp.o

@@ -4,7 +4,7 @@
  * @Autor: YURI
  * @Date: 2022-01-25 19:06:08
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-27 22:40:33
+ * @LastEditTime: 2022-02-05 06:14:41
  */
 #include "encode.h"
 #include "encode_6818/encode_6818.h"
@@ -16,7 +16,7 @@
 
 #ifdef S5P6818
     #include "camera_6124/camera_6124.h"
-    #define VIDEO_INDEX 6  
+    #define VIDEO_INDEX 9  
 #else
     #include "camera_gc2053/camera_gc2053.h"
     #define VIDEO_INDEX 0 

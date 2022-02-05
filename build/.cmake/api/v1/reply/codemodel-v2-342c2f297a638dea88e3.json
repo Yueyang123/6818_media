@@ -1,0 +1,86 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MUTIL_MEDIA",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "audio_record_write::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-audio_record_write-e45609c54d810e0ff216.json",
+					"name" : "audio_record_write",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vi_framebuffer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vi_framebuffer-c2e4d006c5b5f63a29cf.json",
+					"name" : "vi_framebuffer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vi_multichannel::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vi_multichannel-fb61c6bb269eb3f9e73a.json",
+					"name" : "vi_multichannel",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vpss_encode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vpss_encode-164cc5c5d64746bdcb73.json",
+					"name" : "vpss_encode",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build",
+		"source" : "/home/swann/SDK/EXYNOS6818/Driver/MEDIA"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

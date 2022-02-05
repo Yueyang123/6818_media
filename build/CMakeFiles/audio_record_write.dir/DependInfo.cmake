@@ -13,7 +13,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ALSA"
-  "HI3516"
+  "S5P6818"
   )
 
 # The include file search paths:
@@ -25,14 +25,17 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../source/3rd_interface/opencv"
   "../source/framebuffer"
   "../source/audio"
-  "/home/swann/SDK/HI3516/SDK/ffmpeg/include"
-  "/home/swann/SDK/HI3516/SDK/opencv/INSTALL/include"
-  "../source/camera/camera_gc2053"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/include"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/audio/adp"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/common"
-  "/home/swann/SDK/HI3516/MYMMP/mpp/sample/vio"
-  "/home/swann/SDK/HI3516/SDK/alsa-lib/include"
+  "/home/swann/SDK/EXYNOS6818/SDK/ffmpeg/include"
+  "/home/swann/SDK/EXYNOS6818/SDK/opencv/install/include"
+  "../source/camera/camera_6124"
+  "../source/codec/encode/encode_6818"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/kernel/kernel-3.4.39/arch/arm/mach-s5p6818/include"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/kernel/kernel-3.4.39/include"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/src/libion"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/src/libnxv4l2"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/include/theoraparser"
+  "/home/swann/SDK/EXYNOS6818/NEWSOURCE/linux/linux/platform/s5p6818/library/include"
+  "/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include"
   )
 
 # Targets to which this target links.

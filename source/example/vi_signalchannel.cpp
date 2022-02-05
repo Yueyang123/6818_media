@@ -4,7 +4,7 @@
  * @Autor: YURI
  * @Date: 2022-01-24 00:46:05
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-29 08:40:58
+ * @LastEditTime: 2022-02-04 22:06:45
  */
 #include <iostream>
 #include <unistd.h>
@@ -110,10 +110,10 @@ int main(int argc ,void ** argv)
     while(1){
         plat_capture->camera_get_fps(0);
         cap_plat.rawframe=plat_capture->read_frame();
-        NV21_T_RGB(plat_capture->width,plat_capture->height,cap_plat.rawframe,cap_plat.showframe);
-        //ff_sws2->ffmpeg_sws_convert(cap_plat.rawframe,cap_plat.showframe);
-        //image=mat_convert->opencv_convert(cap_plat.showframe);
-        //resize(image,show,Size(0,0),0.4,0.4);
+        //NV21_T_RGB(plat_capture->width,plat_capture->height,cap_plat.rawframe,cap_plat.showframe);
+        ff_sws2->ffmpeg_sws_convert(cap_plat.rawframe,cap_plat.showframe);
+        image=mat_convert->opencv_convert(cap_plat.showframe);
+        resize(image,show,Size(0,0),0.4,0.4);
         p->show_rgbbuffer(cap_plat.showframe,0,0,cap_plat.width,cap_plat.height);
 
         printf("FPS: %lf \r\n" ,plat_capture->camera_get_fps(1) ) ;

@@ -25,8 +25,8 @@ aux_source_directory(source/framebuffer          BASE2_SRC)
 aux_source_directory(source/3rd_interface/opencv BASE3_SRC)
 aux_source_directory(source/3rd_interface/ffmpeg BASE4_SRC)
 
-option(HI3516 "USE HI3516 LIB" ON)
-option(S5P6818 "USE S5P6818 LIB" OFF)
+option(HI3516 "USE HI3516 LIB" OFF)
+option(S5P6818 "USE S5P6818 LIB" ON)
 option(X86     "USE X86 LIB"   OFF)
 #是否开启音频
 option(ALSA "USE ALSA LIB" ON)

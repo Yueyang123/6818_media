@@ -116,10 +116,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/amg8833.dir/DependInfo.cmake"
   "CMakeFiles/vi_framebuffer.dir/DependInfo.cmake"
   "CMakeFiles/vi_multichannel.dir/DependInfo.cmake"
-  "CMakeFiles/vi_signalchannel.dir/DependInfo.cmake"
-  "CMakeFiles/audio_read_play.dir/DependInfo.cmake"
+  "CMakeFiles/vpss_encode.dir/DependInfo.cmake"
   "CMakeFiles/audio_record_write.dir/DependInfo.cmake"
   )

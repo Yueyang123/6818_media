@@ -60,41 +60,41 @@ include CMakeFiles/audio_record_write.dir/flags.make
 CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.o: CMakeFiles/audio_record_write.dir/flags.make
 CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.o: ../source/audio/audio.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.o"
-	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp
+	arm-cortex_a9-linux-gnueabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp
 
 CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.i"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp > CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.i
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp > CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.i
 
 CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.s"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp -o CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.s
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio.cpp -o CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.s
 
 CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.o: CMakeFiles/audio_record_write.dir/flags.make
 CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.o: ../source/audio/audio_wave.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.o"
-	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio_wave.cpp
+	arm-cortex_a9-linux-gnueabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio_wave.cpp
 
 CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.i"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio_wave.cpp > CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.i
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio_wave.cpp > CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.i
 
 CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.s"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio_wave.cpp -o CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.s
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/audio/audio_wave.cpp -o CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.s
 
 CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.o: CMakeFiles/audio_record_write.dir/flags.make
 CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.o: ../source/example/audio_record_write.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.o"
-	arm-himix200-linux-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_record_write.cpp
+	arm-cortex_a9-linux-gnueabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.o -c /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_record_write.cpp
 
 CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.i"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_record_write.cpp > CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.i
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_record_write.cpp > CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.i
 
 CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.s"
-	arm-himix200-linux-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_record_write.cpp -o CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.s
+	arm-cortex_a9-linux-gnueabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swann/SDK/EXYNOS6818/Driver/MEDIA/source/example/audio_record_write.cpp -o CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.s
 
 # Object files for target audio_record_write
 audio_record_write_OBJECTS = \

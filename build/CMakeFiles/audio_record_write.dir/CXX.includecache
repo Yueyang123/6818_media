@@ -70,9 +70,9 @@ signal.h
 string
 -
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/asoundef.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/asoundef.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/asoundlib.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/asoundlib.h
 unistd.h
 -
 stdio.h
@@ -130,43 +130,43 @@ alsa/seqmid.h
 alsa/seq_midi_event.h
 -
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/conf.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/conf.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/control.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/control.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/error.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/error.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/global.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/global.h
 time.h
 -
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/hwdep.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/hwdep.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/input.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/input.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/mixer.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/mixer.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/output.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/output.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/pcm.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/pcm.h
 stdint.h
 -
 pcm_old.h
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/pcm_old.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/pcm_old.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/pcm_old.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/pcm_old.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/rawmidi.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/rawmidi.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/seq.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/seq.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/seq_event.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/seq_event.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/seq_midi_event.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/seq_midi_event.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/seqmid.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/seqmid.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/timer.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/timer.h
 
-/home/swann/SDK/HI3516/SDK/alsa-lib/include/alsa/version.h
+/home/swann/SDK/EXYNOS6818/SDK/alsa-lib/include/alsa/version.h
 
