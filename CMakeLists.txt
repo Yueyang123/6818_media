@@ -15,10 +15,11 @@ set (VI_FRAMEBUFFER_APP source/example/vi_uvc_framebuffer.cpp )
 set (VI_MUTILCHANNEL_APP source/example/vi_multichannel.cpp )
 set (VI_SIGNALCHANNEL_APP source/example/vi_signalchannel.cpp )
 set (VPSS_ENCODE_APP source/example/vpss_encode.cpp )
-set (AUDIO_APP source/example/audio_process.cpp )
+set (AUDIO_WRITE_APP source/example/audio_record_write.cpp )
+set (AUDIO_READ_APP source/example/audio_read_play.cpp )
 #设置程序输出路径
 set (EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
-
+#通用代码
 aux_source_directory(source/camera/camera_uvc    BASE1_SRC)  
 aux_source_directory(source/framebuffer          BASE2_SRC)
 aux_source_directory(source/3rd_interface/opencv BASE3_SRC)
@@ -26,6 +27,7 @@ aux_source_directory(source/3rd_interface/ffmpeg BASE4_SRC)
 
 option(HI3516 "USE HI3516 LIB" ON)
 option(S5P6818 "USE S5P6818 LIB" OFF)
+option(X86     "USE X86 LIB"   OFF)
 #是否开启音频
 option(ALSA "USE ALSA LIB" ON)
 if (ALSA)
@@ -35,24 +37,41 @@ if (ALSA)
     add_definitions(-DALSA)
 endif()
 if (HI3516)
-    add_definitions(-DHI3516)
-endif()
-if (S5P6818)
-    add_definitions(-DS5P6818)
-endif()
-
-if(HI3516)
     #添加环境所需的头文件
     MESSAGE(USE_HI3516_LIB)
-    
+    add_definitions(-DHI3516)
+    set(CMAKE_C_COMPILER "arm-himix200-linux-gcc")
+    set(CMAKE_CXX_COMPILER "arm-himix200-linux-g++")
     #设置两个库所在位置
     set(FFMPEGDIR /home/swann/SDK/HI3516/SDK/ffmpeg)
     set(OPENCVDIR /home/swann/SDK/HI3516/SDK/opencv/INSTALL)
+endif()
+if (S5P6818)
+    #添加环境所需的头文件
+    MESSAGE(USE_S5P6818_LIB)
+    add_definitions(-DS5P6818)
+    set(CMAKE_C_COMPILER "arm-cortex_a9-linux-gnueabi-gcc")
+    set(CMAKE_CXX_COMPILER "arm-cortex_a9-linux-gnueabi-g++")
+    #设置两个库所在位置
+    set(FFMPEGDIR /home/swann/SDK/EXYNOS6818/SDK/ffmpeg)
+    set(OPENCVDIR /home/swann/SDK/EXYNOS6818/SDK/opencv/install)
+endif()
+if (X86)
+    #添加环境所需的头文件
+    MESSAGE(USE_X86_LIB)
+    add_definitions(-DX86)
+    set(CMAKE_C_COMPILER "gcc")
+    set(CMAKE_CXX_COMPILER "g++")
+    set(FFMPEGDIR /home/swann/SDK/X86/SDK/ffmpeg)
+    set(OPENCVDIR /home/swann/SDK/X86/SDK/opencv/install)
+endif()
+#对应平台配置文件
+if(HI3516)
+
     list(APPEND FFmpeg_LIBS  avformat avdevice avcodec avutil avfilter postproc swscale swresample)
     add_link_options(-L${FFMPEGDIR}/lib -lpthread)
     list(APPEND OpenCV_LIBS     opencv_imgproc opencv_core )
     add_link_options(-L${OPENCVDIR}/lib)
-
 
     include_directories (${FFMPEGDIR}/include)
     include_directories (${OPENCVDIR}/include)
@@ -60,7 +79,6 @@ if(HI3516)
     #添加平台摄像头文件夹
     aux_source_directory(source/camera/camera_gc2053   PLATFORM_CAMERA)  
     include_directories (source/camera/camera_gc2053)
-
 
     set (MPPDIR /home/swann/SDK/HI3516/MYMMP/mpp)
     set (COMMON_DIR   ${MPPDIR}/sample/common)
@@ -86,16 +104,17 @@ if(HI3516)
     -DSENSOR0_TYPE=GALAXYCORE_GC2053_MIPI_2M_30FPS_10BIT 
     -DSENSOR1_TYPE=GALAXYCORE_GC2053_MIPI_2M_30FPS_10BIT	
     -DHI_ACODEC_TYPE_INNER -DHI_ACODEC_TYPE_HDMI ) 
-    set(CMAKE_C_COMPILER "arm-himix200-linux-gcc")
-    set(CMAKE_CXX_COMPILER "arm-himix200-linux-g++")
+
     #设置音频库
     if (ALSA)   
         set(ALSADIR /home/swann/SDK/HI3516/SDK/alsa-lib)
         list(APPEND ALSA_LIBS   asound )
         add_link_options(-L${ALSADIR}/lib)
         include_directories (${ALSADIR}/include)
-        add_executable(audio_process  ${AUDIO_SRC} ${AUDIO_APP})
-        target_link_libraries(audio_process ${ALSA_LIBS})
+        add_executable(audio_record_write  ${AUDIO_SRC} ${AUDIO_WRITE_APP})
+        target_link_libraries(audio_record_write ${ALSA_LIBS})
+        add_executable(audio_read_play  ${AUDIO_SRC} ${AUDIO_READ_APP})
+        target_link_libraries(audio_read_play ${ALSA_LIBS})
     endif()
 
     add_executable(vi_signalchannel   ${PLATFORM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_SIGNALCHANNEL_APP})
@@ -112,12 +131,13 @@ if(HI3516)
     target_link_libraries(vi_framebuffer ${OpenCV_LIBS})
     target_link_libraries(vi_framebuffer ${FFmpeg_LIBS})
 
+    set (AMG8833_APP source/example/amg8833.cpp )
+    add_executable(amg8833   ${PLATFORM_CAMERA} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${AMG8833_APP})
+    target_link_libraries(amg8833 ${OpenCV_LIBS})
+    target_link_libraries(amg8833 ${FFmpeg_LIBS})
+    target_link_libraries(amg8833 ${HISI_LIBS})
+
 elseif(S5P6818)
-    #添加环境所需的头文件
-    MESSAGE(USE_S5P6818_LIB)
-    set(FFMPEGDIR /home/swann/SDK/EXYNOS6818/SDK/ffmpeg)
-    set(OPENCVDIR /home/swann/SDK/EXYNOS6818/SDK/opencv/install)
-    
     list(APPEND FFmpeg_LIBS  avformat avdevice avcodec avutil avfilter postproc swscale swresample)
     add_link_options(-L${FFMPEGDIR}/lib -lpthread)
     list(APPEND OpenCV_LIBS   opencv_imgcodecs opencv_dnn opencv_imgproc opencv_core )
@@ -144,25 +164,21 @@ elseif(S5P6818)
     include_directories (${NXPLIBSDIR}/include/theoraparser)
     include_directories (${NXPLIBSDIR}/include)
     add_compile_options(-lz -lm -lrt -Wall -O2 -Wextra -Wcast-align -Wno-unused-parameter -Wshadow -Wwrite-strings -Wcast-qual -fno-strict-aliasing -fstrict-overflow -fsigned-char -fno-omit-frame-pointer -fno-optimize-sibling-calls -Wnon-virtual-dtor)
-    set(CMAKE_C_COMPILER "arm-cortex_a9-linux-gnueabi-gcc")
-    set(CMAKE_CXX_COMPILER "arm-cortex_a9-linux-gnueabi-g++")
-    
+
     list(APPEND NXP_LIBS  ion v4l2-nexell m stdc++ nxvpu
-    nxdsp nxvip nxv4l2 nxvmem nxvidrc theoraparser
-    )
+    nxdsp nxvip nxv4l2 nxvmem nxvidrc theoraparser)
     add_link_options(-L${NXPLIBSDIR}/lib 
     -L${NXPLIBSDIR}/lib/ratecontrol
     -L${NXPLIBSDIR}/src/libion
-    -L${NXPLIBSDIR}/src/libnxv4l2
-    )
+    -L${NXPLIBSDIR}/src/libnxv4l2)
 
     if (ALSA)   
         set(ALSADIR /home/swann/SDK/EXYNOS6818/SDK/alsa-lib)
         list(APPEND ALSA_LIBS   asound )
         add_link_options(-L${ALSADIR}/lib)
         include_directories (${ALSADIR}/include)
-        add_executable(audio_process  ${AUDIO_SRC} ${AUDIO_APP})
-        target_link_libraries(audio_process ${ALSA_LIBS})
+        add_executable(audio_record_write  ${AUDIO_SRC} ${AUDIO_WRITE_APP})
+        target_link_libraries(audio_record_write ${ALSA_LIBS})
     endif()
 
     add_executable(vpss_encode ${PLATFORM_CAMERA} ${PLATFROM_ENCODE} ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VPSS_ENCODE_APP})
@@ -178,7 +194,17 @@ elseif(S5P6818)
     add_executable(vi_framebuffer  ${BASE1_SRC} ${BASE2_SRC} ${BASE3_SRC} ${BASE4_SRC} ${VI_FRAMEBUFFER_APP})
     target_link_libraries(vi_framebuffer ${OpenCV_LIBS})
     target_link_libraries(vi_framebuffer ${FFmpeg_LIBS})
-
+elseif(X86)
+    if (ALSA)  
+        set(ALSADIR /home/swann/SDK/X86/SDK/alsa-lib) 
+        list(APPEND ALSA_LIBS   asound )
+        add_link_options(-L${ALSADIR}/lib)
+        include_directories (${ALSADIR}/include)
+        add_executable(audio_record_write  ${AUDIO_SRC} ${AUDIO_WRITE_APP})
+        target_link_libraries(audio_record_write ${ALSA_LIBS})
+        add_executable(audio_read_play  ${AUDIO_SRC} ${AUDIO_READ_APP})
+        target_link_libraries(audio_read_play ${ALSA_LIBS})
+    endif()
 endif()
 
 

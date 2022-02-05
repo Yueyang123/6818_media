@@ -1,6 +1,79 @@
 #include "audio.h"
 
+void audio::audio_write_frame(unsigned char* data)
+{
+	int ret;
+	if(audio_type!=AUDIO_SPEAKER){
+		fprintf(stderr,"IT'S NOT A SPEAKER \r\n");
+		return;
+	}
+	buffer_out=data;
+	ret = snd_pcm_writei(capture_handle, buffer_out, frame_size);
+
+    if (ret == -EPIPE) {
+      /* EPIPE means underrun */
+      fprintf(stderr, "underrun occurred\n");
+      snd_pcm_prepare(capture_handle);
+    } else if (ret < 0) {
+      fprintf(stderr,"error from writei: %s\n",snd_strerror(ret));
+    }
+
+}
+
+void audio::audio_close_speaker(void)
+{
+	if(audio_type!=AUDIO_SPEAKER){
+		fprintf(stderr,"IT'S NOT A SPEAKER \r\n");
+		return;
+	}
+	snd_pcm_drain(capture_handle);
+  	snd_pcm_close(capture_handle);	
+}
+
+void audio::audio_open_speaker(void)
+{
+	if(audio_type!=AUDIO_SPEAKER){
+		fprintf(stderr,"IT'S NOT A SPEAKER \r\n");
+		return;
+	}
+	int ret,dir;
+	/* Open PCM device for playback. */
+	ret = snd_pcm_open(&capture_handle, audio_path.c_str(),SND_PCM_STREAM_PLAYBACK, 0);
+	if (ret < 0) {
+		fprintf(stderr,"unable to open pcm device: %s\n",snd_strerror(ret));
+		exit(1);
+	}
+	/* Allocate a hardware parameters object. */
+	snd_pcm_hw_params_alloca(&hw_params);
+	/* Fill it in with default values. */
+	snd_pcm_hw_params_any(capture_handle, hw_params);
+	/* Set the desired hardware parameters. */
+	/* Interleaved mode */
+	snd_pcm_hw_params_set_access(capture_handle, hw_params,SND_PCM_ACCESS_RW_INTERLEAVED);
+	/* Signed 16-bit little-endian format */
+	snd_pcm_hw_params_set_format(capture_handle, hw_params,format);
+	/* Two channels (stereo) */
+	snd_pcm_hw_params_set_channels(capture_handle, hw_params, channel);
+	snd_pcm_hw_params_set_rate_near(capture_handle, hw_params,&sample_rate, &dir);
+	/* Set period size to 32 frames. */
+	ret = snd_pcm_hw_params(capture_handle, hw_params);
+	if (ret < 0) {
+		fprintf(stderr,"unable to set hw parameters: %s\n",snd_strerror(ret));
+		exit(1);
+	}	
+}
+
+/**
+ * @description: 关闭麦克风
+ * @param {*}
+ * @return {*}
+ * @author: YURI
+ */
 void audio::audio_close_micophone(void){
+	if(audio_type!=AUDIO_MICPHONE){
+		fprintf(stderr,"IT'S NOT A MICPHONE \r\n");
+		return;
+	}
 	// 释放数据缓冲区
 	free(buffer_in);
 	fprintf(stdout, "buffer_in freed\n");
@@ -8,7 +81,17 @@ void audio::audio_close_micophone(void){
 	snd_pcm_close (capture_handle);
 	fprintf(stdout, "audio interface closed\n");
 }
+/**
+ * @description: 打开麦克风 并设置参数
+ * @param {*}
+ * @return {*}
+ * @author: YURI
+ */
 void audio::audio_open_micophone(void){
+	if(audio_type!=AUDIO_MICPHONE){
+		fprintf(stderr,"IT'S NOT A MICPHONE \r\n");
+		return;
+	}
 	int err;
 	// 打开音频采集卡硬件，并判断硬件是否打开成功，若打开失败则打印出错误提示
 	if ((err = snd_pcm_open (&capture_handle, audio_path.c_str(), SND_PCM_STREAM_CAPTURE, 0)) < 0) 
@@ -91,9 +174,18 @@ void audio::audio_open_micophone(void){
 	buffer_in = (unsigned char*)malloc(frame_size*snd_pcm_format_width(format) / 8 * channel);
 	fprintf(stdout, "buffer_in allocated\n");
 }
-
+/**
+ * @description: 读一帧数据出来
+ * @param {*}
+ * @return {*}
+ * @author: YURI
+ */
 unsigned char *audio::audio_read_frame(void)
 {
+	if(audio_type!=AUDIO_MICPHONE){
+		fprintf(stderr,"IT'S NOT A MICPHONE \r\n");
+		return NULL;
+	}
 	int err;
 	// 读取
 	if ((err = snd_pcm_readi (capture_handle, buffer_in, frame_size)) != frame_size) 
@@ -111,6 +203,10 @@ unsigned char *audio::audio_read_frame(void)
  */
 void audio::audio_channel_split(unsigned char ** data)
 {
+	if(audio_type!=AUDIO_MICPHONE){
+		fprintf(stderr,"IT'S NOT A MICPHONE \r\n");
+		return;
+	}
     for(int i=0;i<channel;i++){
         for(int j=0;j<frame_size;j++){
             data[i][j*2]=buffer_in[j*4+2*i];
@@ -119,7 +215,7 @@ void audio::audio_channel_split(unsigned char ** data)
     }
 }
 /**
- * @description: audio 初始化
+ * @description: audio 麦克风 初始化
  * @param {string} audio_tag
  * @param {int} channel
  * @param {int} sample_rate
@@ -127,8 +223,9 @@ void audio::audio_channel_split(unsigned char ** data)
  * @return {*}
  * @author: YURI
  */
-audio::audio(string audio_tag,int channel,int sample_rate,snd_pcm_format_t pcm_format,int frame_size)
+audio::audio(AUDIO_TYPE type,string audio_tag,int channel,int sample_rate,snd_pcm_format_t pcm_format,int frame_size)
 {
+	this->audio_type=type;
     //设置采集参数
     this->audio_path=audio_tag;
     this->channel=channel;
@@ -144,11 +241,11 @@ audio::audio(string audio_tag,int channel,int sample_rate,snd_pcm_format_t pcm_f
  */
 audio::~audio()
 {
-    // 释放数据缓冲区
-	free(buffer_in);
-	fprintf(stdout, "buffer_in freed\n");
+	if(audio_type=AUDIO_MICPHONE){
+		// 释放数据缓冲区
+		free(buffer_in);
+		fprintf(stdout, "buffer_in freed\n");
+	}
 	// 关闭音频采集卡硬件
-	snd_pcm_close (capture_handle);
-	fprintf(stdout, "audio interface closed\n");
 }
 

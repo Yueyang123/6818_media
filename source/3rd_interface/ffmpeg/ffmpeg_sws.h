@@ -1,9 +1,9 @@
 /*
- * @Description: 
+ * @Description:  提供ffmpeg raw转换接口
  * @Autor: YURI
  * @Date: 2022-01-23 01:57:31
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-24 05:55:56
+ * @LastEditTime: 2022-02-04 07:05:34
  */
 #ifndef FFMPEG_SWS_INTERFACE
 #define FFMPEG_SWS_INTERFACE

@@ -1,9 +1,9 @@
 /*
- * @Description: 提供音频保存为wav文件的接口
+ * @Description: 提供音频保存为wav文件 和读取wav文件的接口
  * @Autor: YURI
  * @Date: 2022-01-28 00:39:43
  * @LastEditors: YURI
- * @LastEditTime: 2022-01-28 07:10:14
+ * @LastEditTime: 2022-02-04 07:09:18
  */
 #ifndef AUDIO_WAVE_H
 #define AUDIO_WAVE_H
@@ -24,6 +24,7 @@ typedef struct _wave_header_t {
     char    fix_data[4];        //"data"
     int     data_length;        //音频数据的长度
 } wave_t;
+typedef enum {WAVE_FILE_READ_MODE=0,WAVE_FILE_WRITE_MODE=1}WAVE_FILE_MODE;
 
 class audio_wave
 {
@@ -49,16 +50,21 @@ private:
         (int)-1          
     };
 public:
-    audio_wave(string file_path,int rate=48000,int bit_rate=16,int channel=2);
+    audio_wave(WAVE_FILE_MODE mode,string filepath,int rate,int bit_rate=16,int channel=2);//写数据的初始化函数
+    audio_wave(WAVE_FILE_MODE mode,string filepath);//读WAV的初始化函数
     ~audio_wave(){};
     //打开文件
-    void audio_start();
+    void audio_write_start();
     //向文件中写入一帧
     void audio_write_frame(unsigned char* frame,int size);
     //结束wav文件
-    void audio_end(void);
+    void audio_write_end(void);
+    //开始准备读入wav文件
+    void audio_read_start(void);
+    //读入一帧文件
+    int audio_read_frame(unsigned char* frame,int size);
+    //结束读入
+    void audio_read_end(void);
 };
-
-
 
 #endif

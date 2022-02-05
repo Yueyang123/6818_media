@@ -224,6 +224,9 @@ MUTIL_MEDIA_SOURCE_DIR:STATIC=/home/swann/SDK/EXYNOS6818/Driver/MEDIA
 //USE S5P6818 LIB
 S5P6818:BOOL=OFF
 
+//USE X86 LIB
+X86:BOOL=OFF
+
 
 ########################
 # INTERNAL cache entries

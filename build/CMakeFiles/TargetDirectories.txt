@@ -4,4 +4,5 @@
 /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_framebuffer.dir
 /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_multichannel.dir
 /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/vi_signalchannel.dir
-/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/audio_process.dir
+/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/audio_read_play.dir
+/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles/audio_record_write.dir

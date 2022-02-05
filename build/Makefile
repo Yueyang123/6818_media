@@ -163,17 +163,30 @@ vi_signalchannel/fast:
 .PHONY : vi_signalchannel/fast
 
 #=============================================================================
-# Target rules for targets named audio_process
+# Target rules for targets named audio_read_play
 
 # Build rule for target.
-audio_process: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 audio_process
-.PHONY : audio_process
+audio_read_play: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_read_play
+.PHONY : audio_read_play
 
 # fast build rule for target.
-audio_process/fast:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/build
-.PHONY : audio_process/fast
+audio_read_play/fast:
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/build
+.PHONY : audio_read_play/fast
+
+#=============================================================================
+# Target rules for targets named audio_record_write
+
+# Build rule for target.
+audio_record_write: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 audio_record_write
+.PHONY : audio_record_write
+
+# fast build rule for target.
+audio_record_write/fast:
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/build
+.PHONY : audio_record_write/fast
 
 source/3rd_interface/ffmpeg/ffmpeg_sws.o: source/3rd_interface/ffmpeg/ffmpeg_sws.cpp.o
 
@@ -253,7 +266,8 @@ source/audio/audio.o: source/audio/audio.cpp.o
 
 # target to build an object file
 source/audio/audio.cpp.o:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio.cpp.o
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/source/audio/audio.cpp.o
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.o
 .PHONY : source/audio/audio.cpp.o
 
 source/audio/audio.i: source/audio/audio.cpp.i
@@ -262,7 +276,8 @@ source/audio/audio.i: source/audio/audio.cpp.i
 
 # target to preprocess a source file
 source/audio/audio.cpp.i:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio.cpp.i
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/source/audio/audio.cpp.i
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.i
 .PHONY : source/audio/audio.cpp.i
 
 source/audio/audio.s: source/audio/audio.cpp.s
@@ -271,7 +286,8 @@ source/audio/audio.s: source/audio/audio.cpp.s
 
 # target to generate assembly for a file
 source/audio/audio.cpp.s:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio.cpp.s
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/source/audio/audio.cpp.s
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/source/audio/audio.cpp.s
 .PHONY : source/audio/audio.cpp.s
 
 source/audio/audio_wave.o: source/audio/audio_wave.cpp.o
@@ -280,7 +296,8 @@ source/audio/audio_wave.o: source/audio/audio_wave.cpp.o
 
 # target to build an object file
 source/audio/audio_wave.cpp.o:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio_wave.cpp.o
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/source/audio/audio_wave.cpp.o
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.o
 .PHONY : source/audio/audio_wave.cpp.o
 
 source/audio/audio_wave.i: source/audio/audio_wave.cpp.i
@@ -289,7 +306,8 @@ source/audio/audio_wave.i: source/audio/audio_wave.cpp.i
 
 # target to preprocess a source file
 source/audio/audio_wave.cpp.i:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio_wave.cpp.i
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/source/audio/audio_wave.cpp.i
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.i
 .PHONY : source/audio/audio_wave.cpp.i
 
 source/audio/audio_wave.s: source/audio/audio_wave.cpp.s
@@ -298,7 +316,8 @@ source/audio/audio_wave.s: source/audio/audio_wave.cpp.s
 
 # target to generate assembly for a file
 source/audio/audio_wave.cpp.s:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/audio/audio_wave.cpp.s
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/source/audio/audio_wave.cpp.s
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/source/audio/audio_wave.cpp.s
 .PHONY : source/audio/audio_wave.cpp.s
 
 source/camera/camera_gc2053/camera_gc2053.o: source/camera/camera_gc2053/camera_gc2053.cpp.o
@@ -397,32 +416,59 @@ source/example/amg8833.cpp.s:
 	$(MAKE) -f CMakeFiles/amg8833.dir/build.make CMakeFiles/amg8833.dir/source/example/amg8833.cpp.s
 .PHONY : source/example/amg8833.cpp.s
 
-source/example/audio_process.o: source/example/audio_process.cpp.o
+source/example/audio_read_play.o: source/example/audio_read_play.cpp.o
 
-.PHONY : source/example/audio_process.o
+.PHONY : source/example/audio_read_play.o
 
 # target to build an object file
-source/example/audio_process.cpp.o:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/example/audio_process.cpp.o
-.PHONY : source/example/audio_process.cpp.o
+source/example/audio_read_play.cpp.o:
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/source/example/audio_read_play.cpp.o
+.PHONY : source/example/audio_read_play.cpp.o
 
-source/example/audio_process.i: source/example/audio_process.cpp.i
+source/example/audio_read_play.i: source/example/audio_read_play.cpp.i
 
-.PHONY : source/example/audio_process.i
+.PHONY : source/example/audio_read_play.i
 
 # target to preprocess a source file
-source/example/audio_process.cpp.i:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/example/audio_process.cpp.i
-.PHONY : source/example/audio_process.cpp.i
+source/example/audio_read_play.cpp.i:
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/source/example/audio_read_play.cpp.i
+.PHONY : source/example/audio_read_play.cpp.i
 
-source/example/audio_process.s: source/example/audio_process.cpp.s
+source/example/audio_read_play.s: source/example/audio_read_play.cpp.s
 
-.PHONY : source/example/audio_process.s
+.PHONY : source/example/audio_read_play.s
 
 # target to generate assembly for a file
-source/example/audio_process.cpp.s:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/source/example/audio_process.cpp.s
-.PHONY : source/example/audio_process.cpp.s
+source/example/audio_read_play.cpp.s:
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/source/example/audio_read_play.cpp.s
+.PHONY : source/example/audio_read_play.cpp.s
+
+source/example/audio_record_write.o: source/example/audio_record_write.cpp.o
+
+.PHONY : source/example/audio_record_write.o
+
+# target to build an object file
+source/example/audio_record_write.cpp.o:
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.o
+.PHONY : source/example/audio_record_write.cpp.o
+
+source/example/audio_record_write.i: source/example/audio_record_write.cpp.i
+
+.PHONY : source/example/audio_record_write.i
+
+# target to preprocess a source file
+source/example/audio_record_write.cpp.i:
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.i
+.PHONY : source/example/audio_record_write.cpp.i
+
+source/example/audio_record_write.s: source/example/audio_record_write.cpp.s
+
+.PHONY : source/example/audio_record_write.s
+
+# target to generate assembly for a file
+source/example/audio_record_write.cpp.s:
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/source/example/audio_record_write.cpp.s
+.PHONY : source/example/audio_record_write.cpp.s
 
 source/example/vi_multichannel.o: source/example/vi_multichannel.cpp.o
 
@@ -553,7 +599,8 @@ help:
 	@echo "... vi_framebuffer"
 	@echo "... vi_multichannel"
 	@echo "... vi_signalchannel"
-	@echo "... audio_process"
+	@echo "... audio_read_play"
+	@echo "... audio_record_write"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.o"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.i"
 	@echo "... source/3rd_interface/ffmpeg/ffmpeg_sws.s"
@@ -575,9 +622,12 @@ help:
 	@echo "... source/example/amg8833.o"
 	@echo "... source/example/amg8833.i"
 	@echo "... source/example/amg8833.s"
-	@echo "... source/example/audio_process.o"
-	@echo "... source/example/audio_process.i"
-	@echo "... source/example/audio_process.s"
+	@echo "... source/example/audio_read_play.o"
+	@echo "... source/example/audio_read_play.i"
+	@echo "... source/example/audio_read_play.s"
+	@echo "... source/example/audio_record_write.o"
+	@echo "... source/example/audio_record_write.i"
+	@echo "... source/example/audio_record_write.s"
 	@echo "... source/example/vi_multichannel.o"
 	@echo "... source/example/vi_multichannel.i"
 	@echo "... source/example/vi_multichannel.s"

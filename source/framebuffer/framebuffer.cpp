@@ -68,18 +68,37 @@ void framebuffer::print_info()
         printf("finfo.line_length=%d\n",finfo.line_length); 
         printf("color bytes=%d\n",color_bytes); 
 }
-
+/**
+ * @description: 设置画笔颜色
+ * @param {unsigned int} color
+ * @return {*}
+ * @author: YURI
+ */
 void framebuffer::set_color(unsigned int color)
 {
     this->color=color;
 }
+/**
+ * @description: 获取屏幕上的点对应的地址
+ * @param {unsigned int} x
+ * @param {unsigned int} y
+ * @return {*}
+ * @author: YURI
+ */
 unsigned char* framebuffer::at(unsigned int x, unsigned int y)
 {
     long int location = 0;
     location = (x+vinfo.xoffset) * (vinfo.bits_per_pixel/8) +(y+vinfo.yoffset) * finfo.line_length;
     return fpb + location ;
 }
-
+/**
+ * @description: 画点
+ * @param {unsigned int} x
+ * @param {unsigned int} y
+ * @param {unsigned int} color
+ * @return {*}
+ * @author: YURI
+ */
 void framebuffer::point(unsigned int x, unsigned int y,unsigned int color)
 {
     if ((x < width) && (y < height))
@@ -96,8 +115,16 @@ void framebuffer::point(unsigned int x, unsigned int y,unsigned int color)
 	}
 }
 
-//x1,y1:起点坐标
-//x2,y2:终点坐标
+/**
+ * @description: 画线
+ * @param {unsigned short} x1 x1,y1:起点坐标
+ * @param {unsigned short} y1
+ * @param {unsigned short} x2 x2,y2:终点坐标
+ * @param {unsigned short} y2
+ * @param {unsigned int} color
+ * @return {*}
+ * @author: YURI
+ */
 void framebuffer::line(unsigned short x1, unsigned short y1, unsigned short x2, unsigned short y2,unsigned int color)
 {
     unsigned short t;
@@ -132,7 +159,16 @@ void framebuffer::line(unsigned short x1, unsigned short y1, unsigned short x2, 
         }
     }
 }
-
+/**
+ * @description: 画字符
+ * @param {unsigned short} x
+ * @param {unsigned short} y
+ * @param {unsigned char} num
+ * @param {unsigned char} size
+ * @param {unsigned int} color
+ * @return {*}
+ * @author: YURI
+ */
 void framebuffer::cchar(unsigned short x,unsigned short y,unsigned char num,unsigned char size,unsigned int color)
 {
     unsigned char temp,t1,t;
@@ -163,10 +199,15 @@ void framebuffer::cchar(unsigned short x,unsigned short y,unsigned char num,unsi
     }
 }
 
-
-
-
-
+/**
+ * @description: 画⚪
+ * @param {unsigned short} x0
+ * @param {unsigned short} y0
+ * @param {unsigned char} r
+ * @param {unsigned int} color
+ * @return {*}
+ * @author: YURI
+ */
 void framebuffer::circle(unsigned short x0,unsigned short y0,unsigned char r,unsigned int color)
 {
     int a,b;
@@ -194,7 +235,18 @@ void framebuffer::circle(unsigned short x0,unsigned short y0,unsigned char r,uns
     }
 }
 
-
+/**
+ * @description: 画字符串
+ * @param {unsigned short} x
+ * @param {unsigned short} y
+ * @param {unsigned short} width
+ * @param {unsigned short} height
+ * @param {unsigned char} size
+ * @param {char*} p
+ * @param {unsigned int} color
+ * @return {*}
+ * @author: YURI
+ */
 void framebuffer::sstring(unsigned short x,unsigned short y,unsigned short width,unsigned short height,unsigned char size,char* p,unsigned int color)
 {
     unsigned char x0=x;

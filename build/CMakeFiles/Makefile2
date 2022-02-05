@@ -57,7 +57,8 @@ all: CMakeFiles/amg8833.dir/all
 all: CMakeFiles/vi_framebuffer.dir/all
 all: CMakeFiles/vi_multichannel.dir/all
 all: CMakeFiles/vi_signalchannel.dir/all
-all: CMakeFiles/audio_process.dir/all
+all: CMakeFiles/audio_read_play.dir/all
+all: CMakeFiles/audio_record_write.dir/all
 
 .PHONY : all
 
@@ -71,7 +72,8 @@ clean: CMakeFiles/amg8833.dir/clean
 clean: CMakeFiles/vi_framebuffer.dir/clean
 clean: CMakeFiles/vi_multichannel.dir/clean
 clean: CMakeFiles/vi_signalchannel.dir/clean
-clean: CMakeFiles/audio_process.dir/clean
+clean: CMakeFiles/audio_read_play.dir/clean
+clean: CMakeFiles/audio_record_write.dir/clean
 
 .PHONY : clean
 
@@ -109,7 +111,7 @@ CMakeFiles/amg8833.dir/clean:
 CMakeFiles/vi_framebuffer.dir/all:
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/depend
 	$(MAKE) -f CMakeFiles/vi_framebuffer.dir/build.make CMakeFiles/vi_framebuffer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=12,13,14,15,16,17 "Built target vi_framebuffer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=16,17,18,19,20,21 "Built target vi_framebuffer"
 .PHONY : CMakeFiles/vi_framebuffer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -136,7 +138,7 @@ CMakeFiles/vi_framebuffer.dir/clean:
 CMakeFiles/vi_multichannel.dir/all:
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/depend
 	$(MAKE) -f CMakeFiles/vi_multichannel.dir/build.make CMakeFiles/vi_multichannel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=18,19,20,21,22,23,24 "Built target vi_multichannel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=22,23,24,25,26,27,28 "Built target vi_multichannel"
 .PHONY : CMakeFiles/vi_multichannel.dir/all
 
 # Build rule for subdir invocation for target.
@@ -163,7 +165,7 @@ CMakeFiles/vi_multichannel.dir/clean:
 CMakeFiles/vi_signalchannel.dir/all:
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/depend
 	$(MAKE) -f CMakeFiles/vi_signalchannel.dir/build.make CMakeFiles/vi_signalchannel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=25,26,27,28,29,30,31 "Built target vi_signalchannel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=29,30,31,32,33,34,35 "Built target vi_signalchannel"
 .PHONY : CMakeFiles/vi_signalchannel.dir/all
 
 # Build rule for subdir invocation for target.
@@ -184,31 +186,58 @@ CMakeFiles/vi_signalchannel.dir/clean:
 .PHONY : CMakeFiles/vi_signalchannel.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/audio_process.dir
+# Target rules for target CMakeFiles/audio_read_play.dir
 
 # All Build rule for target.
-CMakeFiles/audio_process.dir/all:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/depend
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=8,9,10,11 "Built target audio_process"
-.PHONY : CMakeFiles/audio_process.dir/all
+CMakeFiles/audio_read_play.dir/all:
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/depend
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=8,9,10,11 "Built target audio_read_play"
+.PHONY : CMakeFiles/audio_read_play.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/audio_process.dir/rule: cmake_check_build_system
+CMakeFiles/audio_read_play.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/audio_process.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/audio_read_play.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles 0
-.PHONY : CMakeFiles/audio_process.dir/rule
+.PHONY : CMakeFiles/audio_read_play.dir/rule
 
 # Convenience name for target.
-audio_process: CMakeFiles/audio_process.dir/rule
+audio_read_play: CMakeFiles/audio_read_play.dir/rule
 
-.PHONY : audio_process
+.PHONY : audio_read_play
 
 # clean rule for target.
-CMakeFiles/audio_process.dir/clean:
-	$(MAKE) -f CMakeFiles/audio_process.dir/build.make CMakeFiles/audio_process.dir/clean
-.PHONY : CMakeFiles/audio_process.dir/clean
+CMakeFiles/audio_read_play.dir/clean:
+	$(MAKE) -f CMakeFiles/audio_read_play.dir/build.make CMakeFiles/audio_read_play.dir/clean
+.PHONY : CMakeFiles/audio_read_play.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/audio_record_write.dir
+
+# All Build rule for target.
+CMakeFiles/audio_record_write.dir/all:
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/depend
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles --progress-num=12,13,14,15 "Built target audio_record_write"
+.PHONY : CMakeFiles/audio_record_write.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/audio_record_write.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/audio_record_write.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swann/SDK/EXYNOS6818/Driver/MEDIA/build/CMakeFiles 0
+.PHONY : CMakeFiles/audio_record_write.dir/rule
+
+# Convenience name for target.
+audio_record_write: CMakeFiles/audio_record_write.dir/rule
+
+.PHONY : audio_record_write
+
+# clean rule for target.
+CMakeFiles/audio_record_write.dir/clean:
+	$(MAKE) -f CMakeFiles/audio_record_write.dir/build.make CMakeFiles/audio_record_write.dir/clean
+.PHONY : CMakeFiles/audio_record_write.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
